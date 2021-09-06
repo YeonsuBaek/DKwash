@@ -1,0 +1,66 @@
+.drawer-menu {
+  $drawer-menu-item-height: 36px;
+  $drawer-menu-list-padding: 8px;
+  $length-one: 1;
+  $length-two: 2;
+  $length-three: 3;
+
+  @function _calculate-max-content-height($length) {
+    @return $drawer-menu-item-height * $length + $drawer-menu-list-padding;
+  }
+
+  &.is-active {
+    &.is-one {
+      .drawer-menu-content {
+        max-height: _calculate-max-content-height($length-one);
+      }
+    }
+
+    &.is-two {
+      .drawer-menu-content {
+        max-height: _calculate-max-content-height($length-two);
+      }
+    }
+
+    &.is-three {
+      .drawer-menu-content {
+        max-height: _calculate-max-content-height($length-three);
+      }
+    }
+  }
+
+  &-button {
+    @include flexbox(between);
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border-top: 1px solid $border;
+
+    h3 {
+      @include text-style(16, $primary);
+      font-weight: 700;
+    }
+
+    i {
+      font-size: 16px;
+      color: $primary;
+      transform: rotate(90deg);
+    }
+  }
+
+  &-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease-in-out;
+  }
+
+  &-list {
+    margin-bottom: 8px;
+  }
+
+  &-item {
+    width: 100%;
+    height: 36px;
+    padding: 8px 16px;
+  }
+}
