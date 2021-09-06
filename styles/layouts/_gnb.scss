@@ -1,0 +1,74 @@
+.gnb {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid $border;
+  background-color: $white;
+
+  &-wrapper {
+    @include flexbox(between);
+    height: 56px - 1px;
+  }
+
+  .logo {
+    order: 2;
+
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      @include flexbox;
+      width: auto;
+      height: 24px;
+    }
+  }
+
+  &-icon-button {
+    width: 32px;
+    height: 32px;
+
+    i {
+      @include flexbox;
+      font-size: 32px;
+      color: $primary;
+      transition: color 200ms ease-in-out;
+    }
+
+    &:active {
+      i {
+        color: $red;
+      }
+    }
+  }
+
+  .menu-button {
+    order: 1;
+  }
+
+  .inquery-button {
+    order: 3;
+  }
+
+  @include responsive(D) {
+    &-wrapper {
+      @include flexbox(start);
+      height: 80px - 1px;
+    }
+
+    .logo {
+      margin-right: 80px;
+      @include flexbox;
+      order: 1;
+
+      img {
+        height: 36px;
+      }
+    }
+
+    &-nav {
+      order: 2;
+    }
+  }
+}
