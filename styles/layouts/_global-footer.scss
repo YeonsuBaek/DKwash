@@ -73,6 +73,8 @@
   }
 
   @include responsive(T) {
+    position: relative;
+
     .info {
       &-contents {
         margin-bottom: 0;
