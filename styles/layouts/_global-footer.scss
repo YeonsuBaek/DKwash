@@ -1,0 +1,181 @@
+.global-footer {
+  width: 100%;
+  height: auto;
+  padding: 24px 0;
+  background-color: $background;
+
+  .info {
+    .logo {
+      display: block;
+      margin-bottom: 16px;
+
+      img {
+        display: block;
+        width: auto;
+        height: 24px;
+      }
+    }
+
+    &-contents {
+      margin-bottom: 16px;
+    }
+
+    &-list-wrapper {
+      @include flexbox(start);
+    }
+
+    &-item {
+      @include flexbox(start);
+      @include text-style(10, $secondary);
+      margin-right: 8px;
+
+      &.is-primary {
+        color: $primary;
+      }
+
+      dt {
+        margin-right: 2px;
+      }
+
+      dt::after {
+        content: '.';
+        @include text-style(10, $secondary);
+      }
+
+      dd {
+        address {
+          font-style: normal;
+        }
+      }
+    }
+  }
+
+  .sns {
+    @include flexbox(end);
+
+    a {
+      @include flexbox;
+      width: 32px;
+      height: 32px;
+
+      i {
+        color: $tertiary;
+      }
+
+      .ic-blog {
+        font-size: 32px;
+      }
+
+      .ic-youtube {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    .info {
+      &-contents {
+        margin-bottom: 0;
+      }
+    }
+
+    .sns {
+      position: absolute;
+      top: 24px;
+      right: 40px;
+    }
+  }
+
+  @include responsive(D) {
+    height: 400px + 1px;
+    padding: 0;
+
+    .inquery {
+      height: 200px;
+      @include flexbox(between);
+      padding: 0 10px;
+      border-bottom: 1px solid $border;
+
+      &-header {
+        h1 {
+          @include text-style(48, $primary);
+        }
+
+        p {
+          @include text-style(24, $secondary);
+          font-weight: 700;
+        }
+      }
+
+      &-contents {
+        @include flexbox(start);
+        button {
+          @include flexbox;
+          width: 240px;
+          height: 60px;
+
+          span {
+            @include text-style(24, $white);
+            font-weight: 700;
+          }
+
+          i {
+            margin-right: 20px;
+            font-size: 32px;
+            color: $white;
+          }
+        }
+        .open-inquery {
+          background-color: $red;
+          margin-right: 10px;
+        }
+
+        .simple-inquery {
+          background-color: $blue;
+        }
+      }
+    }
+
+    .info {
+      @include flexbox(between);
+      height: 200px;
+
+      &-wrapper {
+        @include flexbox(start);
+      }
+
+      .logo {
+        margin-right: 24px;
+
+        img {
+          height: 50px;
+        }
+      }
+
+      &-item {
+        @include text-style(12, $secondary);
+      }
+
+      .sns {
+        position: static;
+
+        a {
+          width: 50px;
+          height: 50px;
+
+          i {
+            color: $tertiary;
+          }
+
+          .ic-blog {
+            font-size: 50px;
+          }
+
+          .ic-youtube {
+            font-size: 36px;
+          }
+        }
+      }
+    }
+  }
+}
