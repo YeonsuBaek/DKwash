@@ -10,6 +10,10 @@
   }
 
   &.is-active {
+    i {
+      transform: rotate(-90deg);
+    }
+
     &.is-one {
       .drawer-menu-content {
         max-height: _calculate-max-content-height($length-one);
@@ -34,7 +38,14 @@
     width: 100%;
     height: 48px;
     padding: 0 16px;
+    @include text-style(16, $primary);
     border-top: 1px solid $border;
+
+    &:active {
+      h3 {
+        color: $red;
+      }
+    }
 
     h3 {
       @include text-style(16, $primary);
@@ -45,6 +56,7 @@
       font-size: 16px;
       color: $primary;
       transform: rotate(90deg);
+      transition: transform 200ms ease-in-out;
     }
   }
 
@@ -62,5 +74,11 @@
     width: 100%;
     height: 36px;
     padding: 8px 16px;
+    @include text-style(13, $primary);
+    font-weight: 700;
+
+    &:active {
+      color: $red;
+    }
   }
 }
