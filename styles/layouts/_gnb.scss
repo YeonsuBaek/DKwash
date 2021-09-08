@@ -4,6 +4,7 @@
   width: 100%;
   border-bottom: 1px solid $border;
   background-color: $white;
+  z-index: $gnb-level;
 
   &-wrapper {
     @include flexbox(between);
