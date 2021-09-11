@@ -31,11 +31,23 @@
       width: 100%;
       margin-bottom: 8px;
       background-color: $red;
+
+      &:active {
+        background-color: $red-dark;
+      }
     }
 
     .simple-inquery {
       width: 100%;
       background-color: $blue;
+
+      .simple-inquery-button {
+        background-color: $blue;
+
+        &:active {
+          background-color: $blue-dark;
+        }
+      }
     }
 
     .simple-inquery-form {
@@ -92,6 +104,7 @@
         button {
           width: 116px;
           height: 36px;
+          border-radius: 4px;
           font-weight: 700;
         }
 
@@ -101,7 +114,6 @@
 
         .primary-button {
           @include text-style(13, $blue);
-          border-radius: 4px;
           background-color: $white;
         }
       }

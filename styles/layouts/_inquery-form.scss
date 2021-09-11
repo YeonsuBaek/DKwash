@@ -13,6 +13,14 @@
     top: 12px;
     right: 15px;
 
+    &:active {
+      button {
+        i {
+          color: $tertiary;
+        }
+      }
+    }
+
     button {
       i {
         font-size: 28px;
