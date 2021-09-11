@@ -24,11 +24,11 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ic-youtube:before {
-  content: '\e90b';
-}
 .ic-arr:before {
   content: '\e900';
+}
+.ic-arr-thin:before {
+  content: '\e901';
 }
 .ic-blog:before {
   content: '\e902';
@@ -42,18 +42,24 @@ i {
 .ic-chevron:before {
   content: '\e905';
 }
-.ic-DM:before {
+.ic-close:before {
   content: '\e906';
 }
-.ic-fax:before {
+.ic-DM:before {
   content: '\e907';
 }
-.ic-location:before {
+.ic-fax:before {
   content: '\e908';
 }
-.ic-menu:before {
+.ic-location:before {
   content: '\e909';
 }
-.ic-search:before {
+.ic-menu:before {
   content: '\e90a';
+}
+.ic-search:before {
+  content: '\e90b';
+}
+.ic-youtube:before {
+  content: '\e90c';
 }
