@@ -1,0 +1,127 @@
+.inquery {
+  $simple-inquery-form-padding: 40px;
+  $simple-inquery-user-info: 36px * 2 + 24px;
+  $simple-inquery-most-check: 16px * 2 + 20px;
+  $simple-inquery-button-group: 32px;
+
+  @function _form-max-content-height() {
+    @return $simple-inquery-form-padding + $simple-inquery-user-info +
+      $simple-inquery-most-check + $simple-inquery-button-group;
+  }
+
+  &-header {
+    margin-bottom: 40px;
+
+    h1 {
+      @include text-style(18, $primary);
+      font-weight: 700;
+    }
+
+    p {
+      @include text-style(12, $secondary);
+      font-weight: 500;
+    }
+  }
+
+  &-contents {
+    @include flexbox;
+    flex-direction: column;
+
+    .open-inquery {
+      width: 100%;
+      margin-bottom: 8px;
+      background-color: $red;
+    }
+
+    .simple-inquery {
+      width: 100%;
+      background-color: $blue;
+    }
+
+    .simple-inquery-form {
+      @include flexbox;
+      flex-direction: column;
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 200ms ease-in-out;
+
+      &.is-active {
+        max-height: _form-max-content-height();
+        padding: 16px 25px 24px;
+      }
+
+      .user-info {
+        margin-bottom: 16px - 8px;
+
+        input {
+          @include flexbox;
+          width: 240px;
+          height: 36px;
+          padding: 0 12px;
+          margin-bottom: 8px;
+          @include text-style(14, $primary);
+          border-radius: 4px;
+          background-color: $white;
+
+          &::placeholder {
+            color: $tertiary;
+          }
+        }
+      }
+
+      .most-check {
+        margin-bottom: 16px - 4px;
+
+        &-item {
+          @include flexbox(start);
+          margin-bottom: 4px;
+
+          input {
+            margin-right: 4px;
+          }
+
+          label {
+            @include text-style(12, $white);
+          }
+        }
+      }
+
+      .button-group {
+        @include flexbox(start);
+
+        button {
+          width: 116px;
+          height: 36px;
+          font-weight: 700;
+        }
+
+        .ghost-button {
+          @include text-style(13, $white);
+        }
+
+        .primary-button {
+          @include text-style(13, $blue);
+          border-radius: 4px;
+          background-color: $white;
+        }
+      }
+    }
+
+    button {
+      @include flexbox;
+      width: 100%;
+      height: 40px;
+
+      span {
+        @include text-style(16, $white);
+        font-weight: 700;
+      }
+
+      i {
+        margin-right: 16px;
+        font-size: 24px;
+        color: $white;
+      }
+    }
+  }
+}

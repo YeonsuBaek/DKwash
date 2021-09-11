@@ -274,26 +274,36 @@
             </div>
 
             <div class="inquery-contents">
-              <button class="open-inquery" type="button">
-                <i class="ic-cell"></i>
-                <span>창업문의</span>
-              </button>
+              <div class="open-inquery">
+                <button class="open-inquery-button" type="button">
+                  <i class="ic-cell"></i>
+                  <span>창업문의</span>
+                </button>
+              </div>
   
-              <button class="simple-inquery" type="button">
-                <i class="ic-DM"></i>
-                <span>간편문의</span>
-
-                <form class="simple-inquery-form" action="#" method="GET">
+              <div class="simple-inquery">
+                <button class="simple-inquery-button" type="button">
+                  <i class="ic-DM"></i>
+                  <span>간편문의</span>
+                </button>
+  
+                <form class="simple-inquery-form is-active" action="#" method="GET">
                   <div class="user-info">
                     <input type="text" placeholder="이름" required />
                     <input type="num" placeholder="전화번호" required />
                   </div>
     
                   <div class="most-check">
-                    <input id="most-check-01" type="checkbox" required />
-                    <label for="most-check-01">이름과 전화번호를 정확히 입력해주세요.</label>
-                    <input id="most-check-02" type="checkbox" required />
-                    <label for="most-check-02">개인정보 활용동의</label>  
+                    <ul class="most-check-list">
+                      <li class="most-check-item">
+                        <input id="most-check-01" type="checkbox" required />
+                        <label for="most-check-01">이름과 전화번호를 정확히 입력해주세요.</label>
+                      </li>
+                      <li class="most-check-item">
+                        <input id="most-check-02" type="checkbox" required />
+                        <label for="most-check-02">개인정보 활용동의</label>  
+                      </li>
+                    </ul>
                   </div>
     
                   <div class="button-group">
@@ -301,12 +311,14 @@
                     <button class="primary-button" type="submit">전송하기</button>
                   </div>
                 </form>
-              </button>
+              </div>
             </div>
 
-            <button class="close-button" type="button" aria-label="문의 창 닫기">
-              <i class="ic-close"></i>
-            </button> 
+            <div class="close-button">
+              <button type="button" aria-label="문의 창 닫기">
+                <i class="ic-close"></i>
+              </button> 
+            </div>
            </div>
 
             
