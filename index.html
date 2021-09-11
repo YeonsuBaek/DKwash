@@ -263,6 +263,58 @@
       </nav>
     </aside>
 
+    <aside class="inquery-form lg-hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+           <div class="inquey">  
+            <div class="inquery-header">
+              <h1>문의하세요</h1>
+              <p>창업문의, 간편문의를 주시면 확인 후 연락드리겠습니다</p>
+            </div>
+
+            <div class="inquery-contents">
+              <button class="open-inquery" type="button">
+                <i class="ic-cell"></i>
+                <span>창업문의</span>
+              </button>
+  
+              <button class="simple-inquery" type="button">
+                <i class="ic-DM"></i>
+                <span>간편문의</span>
+
+                <form class="simple-inquery-form" action="#" method="GET">
+                  <div class="user-info">
+                    <input type="text" placeholder="이름" required />
+                    <input type="num" placeholder="전화번호" required />
+                  </div>
+    
+                  <div class="most-check">
+                    <input id="most-check-01" type="checkbox" required />
+                    <label for="most-check-01">이름과 전화번호를 정확히 입력해주세요.</label>
+                    <input id="most-check-02" type="checkbox" required />
+                    <label for="most-check-02">개인정보 활용동의</label>  
+                  </div>
+    
+                  <div class="button-group">
+                    <button class="ghost-button" type="button">약관보기</button>
+                    <button class="primary-button" type="submit">전송하기</button>
+                  </div>
+                </form>
+              </button>
+            </div>
+
+            <button class="close-button" type="button" aria-label="문의 창 닫기">
+              <i class="ic-close"></i>
+            </button> 
+           </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </aside>
+
     <div id="overlay" class="overlay" aria-hidden></div>
   </body>
 </html>
