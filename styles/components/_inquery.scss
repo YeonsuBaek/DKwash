@@ -124,4 +124,16 @@
       }
     }
   }
+
+  @include responsive(T) {
+    &-header {
+      h1 {
+        @include text-style(24, $primary);
+      }
+
+      p {
+        @include text-style(14, $secondary);
+      }
+    }
+  }
 }
