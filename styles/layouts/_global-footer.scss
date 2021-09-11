@@ -92,52 +92,6 @@
     height: 400px + 1px;
     padding: 0;
 
-    .inquery {
-      height: 200px;
-      @include flexbox(between);
-      padding: 0 10px;
-      border-bottom: 1px solid $border;
-
-      &-header {
-        h1 {
-          @include text-style(48, $primary);
-        }
-
-        p {
-          @include text-style(24, $secondary);
-          font-weight: 700;
-        }
-      }
-
-      &-contents {
-        @include flexbox(start);
-        button {
-          @include flexbox;
-          width: 240px;
-          height: 60px;
-
-          span {
-            @include text-style(24, $white);
-            font-weight: 700;
-          }
-
-          i {
-            margin-right: 20px;
-            font-size: 32px;
-            color: $white;
-          }
-        }
-        .open-inquery {
-          background-color: $red;
-          margin-right: 10px;
-        }
-
-        .simple-inquery {
-          background-color: $blue;
-        }
-      }
-    }
-
     .info {
       @include flexbox(between);
       height: 200px;

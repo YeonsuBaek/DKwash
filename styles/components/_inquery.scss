@@ -148,4 +148,60 @@
       }
     }
   }
+
+  @include responsive(D) {
+    height: 200px;
+    @include flexbox(between);
+    padding: 0 10px;
+    border-bottom: 1px solid $border;
+
+    &-header {
+      margin-bottom: 0;
+
+      h1 {
+        @include text-style(48, $primary);
+      }
+
+      p {
+        @include text-style(24, $secondary);
+      }
+    }
+
+    &-contents {
+      @include flexbox(end);
+      flex-direction: row;
+
+      .open-inquery {
+        width: 240px;
+        margin: 0 8px 0 0;
+
+        &:hover {
+          background-color: $red-dark;
+        }
+      }
+
+      .simple-inquery {
+        width: 240px;
+
+        &:hover {
+          background-color: $blue-dark;
+        }
+      }
+
+      button {
+        @include flexbox;
+        width: 240px;
+        height: 60px;
+
+        span {
+          @include text-style(24, $white);
+        }
+
+        i {
+          margin-right: 20px;
+          font-size: 32px;
+        }
+      }
+    }
+  }
 }
