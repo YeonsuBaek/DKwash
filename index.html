@@ -18,12 +18,13 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./fonts.css" />
   </head>
 
   <body>
-    <header class="gnb-header">
+    <header class="global-header">
       <div class="gnb">
         <div class="container">
           <div class="low">
@@ -89,52 +90,52 @@
           <div class="home-carousel-slider">
             <ol class="slider-list">
               <li class="slider-item" role="tabpanel" aria-labelledby="home-carousel-tab-1">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <header class="slider-header">
-                        <span>Made in Korea</span>
-                        <h2>No Brush Auto Car wash</h2>
-                      </header>
-              
-                      <a href="#" aria-label="회사소개 더 보러가기">VIEW</a>
-                    </div>
-                  </div>
+                <div class="background-img cover-01" aria-hidden>
+                  <img src="./assets/images/img-cover-01.png" alt="배경이미지-01">
                 </div>
+
+                  <header class="slider-header">
+                    <span>Made in Korea</span>
+                        <h2>No Brush Auto Car wash</h2>
+                  </header>
+
+                  <div class="view-button">
+                    <a href="#" aria-label="회사소개 더 보러가기">VIEW</a>
+                  </div>
               </li>
-    
+
               <li class="slider-item" role="tabpanel" aria-labelledby="home-carousel-tab-2">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <header class="slider-header">
-                        <span>Made in Korea</span>
-                        <h2>No Brush Auto Car wash</h2>
-                      </header>
-              
-                      <a href="#" aria-label="회사소개 더 보러가기">VIEW</a>
-                    </div>
-                  </div>
+                <div class="background-img cover-02" aria-hidden>
+                  <img src="./assets/images/img-cover-02.png" alt="배경이미지-02">
                 </div>
-              </li>
-    
-              <li class="slider-item" role="tabpanel" aria-labelledby="home-carousel-tab-3">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <header class="slider-header">
-                        <span>Made in Korea</span>
+
+                  <header class="slider-header">
+                    <span>Made in Korea</span>
                         <h2>No Brush Auto Car wash</h2>
-                      </header>
-              
-                      <a href="#" aria-label="회사소개 더 보러가기">VIEW</a>
-                    </div>
+                  </header>
+
+                  <div class="view-button">
+                    <a href="#" aria-label="회사소개 더 보러가기">VIEW</a>
                   </div>
+              </li>
+
+              <li class="slider-item" role="tabpanel" aria-labelledby="home-carousel-tab-3">
+                <div class="background-img cover-03" aria-hidden>
+                  <img src="./assets/images/img-cover-03.png" alt="배경이미지-03">
+                </div>
+
+                <header class="slider-header">
+                  <span>Made in Korea</span>
+                  <h2>No Brush Auto Car wash</h2>
+                </header>
+
+                <div class="view-button">
+                  <a href="#" aria-label="회사소개 더 보러가기">VIEW</a>
                 </div>
               </li>
             </ol>
           </div>
-          
+
           <div class="home-carousel-pagination">
             <ol class="pagination-list" role="tablist">
               <li class="pagination-item" role="tab" id="home-carousel-tab-1">
@@ -152,7 +153,7 @@
 
         <div class="scroll" aria-label="스크롤을 내리세요">
           <span>SCROLL DOWN</span>
-          <div class="scroll-icon"></div>
+          <i class="ic-scroll"></i>
         </div>
       </section>
     </main>
@@ -407,5 +408,7 @@
     
     <script src="./js/isActive.js"></script>
     <script src="./js/drawerMenu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="./js/homeCarousel.js"></script>
   </body>
 </html>
