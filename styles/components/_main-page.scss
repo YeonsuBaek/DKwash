@@ -1,0 +1,35 @@
+.main-page {
+  position: relative;
+
+  .scroll {
+    position: absolute;
+    @include inline-flexbox;
+    bottom: 64px;
+    left: -32px;
+    transform: rotate(90deg);
+
+    span {
+      font-family: $font-eng;
+      color: $white;
+      font-size: 8px;
+      margin-right: 4px;
+      opacity: 0.8;
+    }
+
+    i {
+      font-size: 24px;
+      color: $white;
+      animation: scroll-down 0.6s infinite alternate;
+    }
+  }
+}
+
+@keyframes scroll-down {
+  100% {
+    transform: translateX(5px) rotate(-90deg);
+  }
+
+  0% {
+    transform: translateX(0) rotate(-90deg);
+  }
+}

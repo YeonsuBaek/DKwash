@@ -18,9 +18,12 @@
 @import './layouts/gnb';
 @import './layouts/sidebar';
 @import './layouts/overlay';
+@import './layouts/global-header';
 @import './layouts/global-footer';
 @import './layouts/inquery-form';
 
 @import './components/gnb-nav';
 @import './components/drawer-menu';
 @import './components/inquery';
+@import './components/main-page';
+@import './components/home-carousel';

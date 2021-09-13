@@ -1,0 +1,118 @@
+.home-carousel {
+  $pagination-size: 14px;
+
+  position: relative;
+
+  .slider-list {
+    width: 100%;
+    height: calc(100vh - #{$gnb-height-sm});
+  }
+
+  .slider-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .background-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        object-fit: cover;
+      }
+
+      &.cover-01 {
+        img {
+          object-position: 40% 40%;
+        }
+      }
+
+      &.cover-02 {
+        img {
+          object-position: 50% 100%;
+        }
+      }
+
+      &.cover-03 {
+        img {
+          object-position: 60% 100%;
+        }
+      }
+    }
+  }
+
+  .slider-header {
+    @include pos-center-x;
+    top: 120px;
+    @include flexbox;
+    flex-direction: column;
+
+    span {
+      margin-bottom: 4px;
+      font-family: $font-eng;
+      @include text-style(12, $white);
+      font-weight: 700;
+    }
+
+    h2 {
+      font-family: $font-eng;
+      @include text-style(18, $white);
+      white-space: nowrap;
+    }
+  }
+
+  .view-button {
+    @include pos-center-x;
+    bottom: 120px;
+    @include flexbox;
+    width: 120px;
+    height: 40px;
+    border: 1px solid $white;
+
+    a {
+      font-family: $font-eng;
+      @include text-style(14, $white);
+      font-weight: 500;
+    }
+  }
+
+  &-pagination {
+    @include pos-center-x;
+    bottom: 64px;
+
+    .pagination-list {
+      @include flexbox;
+    }
+    .pagination-item {
+      margin-right: $pagination-size;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      button {
+        display: block;
+        width: $pagination-size;
+        height: $pagination-size;
+        border: 1px solid $white;
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+
+      &.tns-nav-active {
+        button {
+          background-color: $white;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
