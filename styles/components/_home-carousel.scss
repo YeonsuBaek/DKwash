@@ -1,4 +1,6 @@
 .home-carousel {
+  $position-sm: 120px;
+  $position-md: 152px;
   $pagination-size: 14px;
 
   position: relative;
@@ -51,9 +53,12 @@
 
   .slider-header {
     @include pos-center-x;
-    top: 120px;
+    top: $position-sm;
     @include flexbox;
     flex-direction: column;
+    animation-name: text-slide-up;
+    animation-duration: 3000ms;
+    animation-delay: 100ms;
 
     span {
       margin-bottom: 4px;
@@ -71,9 +76,9 @@
 
   .view-button {
     @include pos-center-x;
-    bottom: 120px;
+    bottom: $position-sm;
     @include flexbox;
-    width: 120px;
+    width: $position-sm;
     height: 40px;
     border: 1px solid $white;
 
@@ -114,5 +119,42 @@
         }
       }
     }
+  }
+
+  @include responsive(T) {
+    .slider-header {
+      top: $position-md;
+
+      span {
+        margin-bottom: 8px;
+        @include text-style(18);
+      }
+
+      h2 {
+        @include text-style(36);
+      }
+    }
+
+    .view-button {
+      bottom: $position-md;
+      width: $position-md;
+      height: 48px;
+
+      a {
+        @include text-style(16);
+      }
+    }
+  }
+}
+
+@keyframes text-slide-up {
+  100% {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, 20px, 0);
   }
 }
