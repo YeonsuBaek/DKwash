@@ -139,6 +139,12 @@
       bottom: $position-md;
       width: $position-md;
       height: 48px;
+      background-color: transparent;
+      transition: background-color 200ms ease-in-out;
+
+      &:hover {
+        background-color: rgba(225, 225, 225, 0.2);
+      }
 
       a {
         @include text-style(16);

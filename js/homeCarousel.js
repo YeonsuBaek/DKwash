@@ -2,7 +2,7 @@ const homeCarousel = tns({
   container: '.slider-list',
   slideBy: 'page',
   autoplay: true,
-  controls: false,
+  controlsContainer: '#customize-controls',
   navContainer: '.pagination-list',
   navAsThumbnails: true,
   arrowKeys: true,
