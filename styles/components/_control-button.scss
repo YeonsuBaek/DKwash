@@ -1,0 +1,56 @@
+.control-button {
+  position: relative;
+
+  &-item {
+    position: absolute;
+    top: 0;
+    width: 480px;
+    height: calc(100vh - #{$gnb-height-md});
+    opacity: 0;
+    transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
+
+    i {
+      @include pos-center-y;
+      font-size: 48px;
+      color: $white;
+      opacity: 0.5;
+    }
+
+    &.prev-button {
+      left: 0;
+
+      i {
+        left: 80px;
+        transform: rotate(180deg);
+      }
+    }
+
+    &.next-button {
+      right: 0;
+
+      i {
+        right: 80px;
+      }
+    }
+
+    &:hover {
+      opacity: 0.75;
+
+      &.prev-button {
+        background: linear-gradient(
+          to right,
+          rgba(25, 26, 32, 0.75),
+          rgba(255, 255, 255, 0)
+        );
+      }
+
+      &.next-button {
+        background: linear-gradient(
+          to left,
+          rgba(25, 26, 32, 0.75),
+          rgba(255, 255, 255, 0)
+        );
+      }
+    }
+  }
+}
