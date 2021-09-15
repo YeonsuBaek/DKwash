@@ -1,0 +1,131 @@
+.info-page {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - #{$gnb-height-sm});
+  background-image: url('./assets/images/img-cover-04.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .info {
+    &-header {
+      margin-top: 48px;
+
+      h2 {
+        margin-bottom: 4px;
+        @include text-style(24, $white);
+      }
+
+      span {
+        @include text-style(12, $white);
+      }
+    }
+
+    &-content {
+      @include pos-center-x;
+      bottom: 96px;
+      width: 240px;
+      height: 230px;
+    }
+
+    &-item {
+      position: absolute;
+      @include flexbox;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: $dark;
+      opacity: 0.6;
+      transition: width 200ms ease-in-out, height 200ms ease-in-out,
+        background-color 200ms ease-in-out, opacity 200ms ease-in-out;
+
+      button {
+        @include text-style(10, $white);
+      }
+
+      &.is-active {
+        width: 64px;
+        height: 64px;
+        background-color: $red;
+        opacity: 1;
+
+        button {
+          @include text-style(13);
+        }
+      }
+
+      &:nth-child(1) {
+        @include pos-center-x;
+        top: 0;
+
+        &.is-active {
+          top: -8px;
+        }
+      }
+
+      &:nth-child(2) {
+        top: 28%;
+        left: 5px;
+
+        &.is-active {
+          left: -3px;
+        }
+      }
+
+      &:nth-child(3) {
+        bottom: 8px;
+        left: 18%;
+
+        &.is-active {
+          bottom: 0;
+          left: 15%;
+        }
+      }
+
+      &:nth-child(4) {
+        bottom: 8px;
+        right: 18%;
+
+        &.is-active {
+          bottom: 0;
+          right: 15%;
+        }
+      }
+
+      &:nth-child(5) {
+        top: 28%;
+        right: 5px;
+
+        &.is-active {
+          right: -3px;
+        }
+      }
+    }
+  }
+
+  .view-button {
+    @include pos-center;
+    @include flexbox;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: $white;
+    opacity: 0.6;
+
+    a {
+      font-family: $font-eng;
+      @include text-style(12, $dark);
+      text-align: center;
+    }
+
+    &::after {
+      @include pos-center;
+      content: '';
+      width: 192px;
+      height: 192px;
+      border: 1px solid $white;
+      border-radius: 50%;
+      opacity: 0.8;
+    }
+  }
+}

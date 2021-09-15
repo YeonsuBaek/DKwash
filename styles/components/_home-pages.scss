@@ -24,6 +24,23 @@
     }
   }
 
+  .top-button {
+    position: absolute;
+    bottom: 24px;
+    right: 15px;
+    @include flexbox;
+    width: 40px;
+    height: 40px;
+    background-color: $white;
+    opacity: 0.5;
+
+    i {
+      font-size: 24px;
+      color: $dark;
+      transform: rotate(-90deg);
+    }
+  }
+
   @include responsive(T) {
     .scroll {
       bottom: 128px;
