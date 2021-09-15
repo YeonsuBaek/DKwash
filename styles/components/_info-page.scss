@@ -172,11 +172,10 @@
   @include responsive(D) {
     .info {
       &-content {
-        bottom: 144px;
+        @include pos-center-y;
         right: 160px;
         width: 534px;
         height: 512px;
-        transform: none;
       }
 
       &-item {
