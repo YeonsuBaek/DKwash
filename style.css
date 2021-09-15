@@ -1480,11 +1480,12 @@ ol {
           height: 288px; } }
   @media screen and (min-width: 1200px) {
     .info-page .info-content {
-      bottom: 144px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       right: 160px;
       width: 534px;
-      height: 512px;
-      transform: none; }
+      height: 512px; }
     .info-page .info-item {
       width: 120px;
       height: 120px; }
