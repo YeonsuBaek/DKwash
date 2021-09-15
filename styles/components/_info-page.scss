@@ -128,4 +128,63 @@
       opacity: 0.8;
     }
   }
+
+  @include responsive(T) {
+    height: calc(100vh - #{$gnb-height-md});
+
+    .info {
+      &-header {
+        margin-top: 80px;
+
+        h2 {
+          margin-bottom: 8px;
+          @include text-style(36);
+        }
+
+        span {
+          @include text-style(16);
+        }
+      }
+
+      &-content {
+        bottom: 240px;
+        width: 360px;
+        height: 345px;
+      }
+
+      &-item {
+        width: 72px;
+        height: 72px;
+
+        button {
+          @include text-style(14);
+          white-space: nowrap;
+        }
+
+        &.is-active {
+          width: 96px;
+          height: 96px;
+
+          button {
+            @include text-style(18);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .view-button {
+      width: 112px;
+      height: 112px;
+
+      a {
+        @include text-style(18);
+      }
+
+      &::after {
+        width: 288px;
+        height: 288px;
+      }
+    }
+  }
 }
