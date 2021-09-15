@@ -35,7 +35,7 @@
       height: 48px;
       border-radius: 50%;
       background-color: $dark;
-      opacity: 0.6;
+      opacity: 0.7;
       transition: width 200ms ease-in-out, height 200ms ease-in-out,
         background-color 200ms ease-in-out, opacity 200ms ease-in-out;
 
@@ -43,7 +43,8 @@
         @include text-style(10, $white);
       }
 
-      &.is-active {
+      &.is-active,
+      &:hover {
         width: 64px;
         height: 64px;
         background-color: $red;
@@ -113,9 +114,13 @@
     opacity: 0.6;
 
     a {
+      @include flexbox;
+      width: 100%;
+      height: 100%;
       font-family: $font-eng;
       @include text-style(12, $dark);
       text-align: center;
+      border-radius: 50%;
     }
 
     &::after {
@@ -126,6 +131,7 @@
       border: 1px solid $white;
       border-radius: 50%;
       opacity: 0.8;
+      pointer-events: none;
     }
   }
 
@@ -161,7 +167,8 @@
           white-space: nowrap;
         }
 
-        &.is-active {
+        &.is-active,
+        &:hover {
           width: 96px;
           height: 96px;
 
@@ -184,6 +191,70 @@
       &::after {
         width: 288px;
         height: 288px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .info {
+      &-header {
+        margin-top: 120px;
+
+        h2 {
+          margin-bottom: 8px;
+          @include text-style(48);
+        }
+
+        span {
+          @include text-style(24);
+        }
+      }
+
+      &-content {
+        bottom: 144px;
+        right: 160px;
+        width: 534px;
+        height: 512px;
+        transform: none;
+      }
+
+      &-item {
+        width: 120px;
+        height: 120px;
+
+        button {
+          @include text-style(18);
+        }
+
+        &.is-active,
+        &:hover {
+          width: 144px;
+          height: 144px;
+
+          button {
+            @include text-style(24);
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .view-button {
+      width: 160px;
+      height: 160px;
+      transition: opacity 200ms ease-in-out;
+
+      a {
+        @include text-style(24);
+      }
+
+      &::after {
+        width: 416px;
+        height: 416px;
+      }
+
+      &:hover {
+        opacity: 1;
       }
     }
   }
