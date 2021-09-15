@@ -8,19 +8,6 @@
   background-position: center;
 
   .info {
-    &-header {
-      margin-top: 48px;
-
-      h2 {
-        margin-bottom: 4px;
-        @include text-style(24, $white);
-      }
-
-      span {
-        @include text-style(12, $white);
-      }
-    }
-
     &-content {
       @include pos-center-x;
       bottom: 96px;
@@ -139,19 +126,6 @@
     height: calc(100vh - #{$gnb-height-md});
 
     .info {
-      &-header {
-        margin-top: 80px;
-
-        h2 {
-          margin-bottom: 8px;
-          @include text-style(36);
-        }
-
-        span {
-          @include text-style(16);
-        }
-      }
-
       &-content {
         bottom: 240px;
         width: 360px;
@@ -197,19 +171,6 @@
 
   @include responsive(D) {
     .info {
-      &-header {
-        margin-top: 120px;
-
-        h2 {
-          margin-bottom: 8px;
-          @include text-style(48);
-        }
-
-        span {
-          @include text-style(24);
-        }
-      }
-
       &-content {
         bottom: 144px;
         right: 160px;
