@@ -10,7 +10,7 @@
   .products-list {
     @include pos-center-x;
     bottom: 96px;
-    @include flexbox(center, end);
+    @include flexbox;
   }
 
   .products-item {
@@ -43,51 +43,54 @@
       }
 
       .products-name-eng,
-      .arr {
+      .view-button {
         display: block;
         visibility: visible;
 
         @include text-style(10, $white);
       }
     }
-  }
 
-  i {
-    margin-bottom: 4px;
-    font-size: 40px;
-    color: $white;
-  }
-}
+    i {
+      margin-bottom: 4px;
+      font-size: 40px;
+      color: $white;
+    }
 
-.products-name {
-  @include text-style(10, $white);
-  font-weight: 400;
+    .products-name {
+      @include text-style(10, $white);
+      font-weight: 400;
 
-  &-eng {
-    display: none;
-    visibility: hidden;
-    margin-bottom: 8px;
-  }
-}
+      &-eng {
+        display: none;
+        visibility: hidden;
+        margin-bottom: 8px;
+      }
+    }
 
-.arr {
-  display: none;
-  visibility: hidden;
-  position: relative;
-  width: 40px;
-  margin: 5px 0 0 0;
-  border-top: 1px solid #fff;
-  animation: scroll 1s infinite alternate;
+    .view-button {
+      display: none;
+      visibility: hidden;
 
-  &::after {
-    content: '';
-    width: 6px;
-    height: 1px;
-    border-bottom: 1px solid #fff;
-    transform: rotate(45deg);
-    position: absolute;
-    left: 0;
-    top: 0;
+      .arr {
+        position: relative;
+        width: 40px;
+        margin: 5px 0 0 0;
+        border-top: 1px solid #fff;
+        animation: scroll 1s infinite alternate;
+
+        &::after {
+          content: '';
+          width: 6px;
+          height: 1px;
+          border-bottom: 1px solid #fff;
+          transform: rotate(45deg);
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
   }
 }
 
