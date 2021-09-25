@@ -9,7 +9,7 @@
 
   .products-list {
     @include pos-center-x;
-    bottom: 96px;
+    bottom: 20%;
     @include flexbox;
   }
 
@@ -88,6 +88,49 @@
           position: absolute;
           left: 0;
           top: 0;
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+    .products-item {
+      width: 208px;
+      height: 312px;
+
+      &.is-active {
+        width: 280px;
+        height: 400px;
+        background-color: $red;
+        opacity: 1;
+
+        .products-name-eng,
+        .view-button {
+          @include text-style(16, $white);
+        }
+
+        .view-button {
+          @include flexbox;
+          flex-direction: column;
+
+          span {
+            margin-bottom: 16px;
+          }
+        }
+      }
+
+      i {
+        margin-bottom: 16px;
+        font-size: 80px;
+      }
+
+      .products-name {
+        @include text-style(16, $white);
+
+        &-eng {
+          display: none;
+          visibility: hidden;
+          margin-bottom: 24px;
         }
       }
     }
