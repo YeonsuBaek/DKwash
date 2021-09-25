@@ -28,29 +28,6 @@
       margin-right: 20px;
     }
 
-    &.is-active {
-      width: 112px;
-      height: 160px;
-      background-color: $red;
-      opacity: 1;
-
-      &:first-child {
-        transform-origin: bottom right;
-      }
-
-      &:last-child {
-        transform-origin: bottom left;
-      }
-
-      .products-name-eng,
-      .view-button {
-        display: block;
-        visibility: visible;
-
-        @include text-style(10, $white);
-      }
-    }
-
     i {
       margin-bottom: 4px;
       font-size: 40px;
@@ -91,33 +68,35 @@
         }
       }
     }
+
+    &.is-active {
+      width: 112px;
+      height: 160px;
+      background-color: $red;
+      opacity: 1;
+
+      &:first-child {
+        transform-origin: bottom right;
+      }
+
+      &:last-child {
+        transform-origin: bottom left;
+      }
+
+      .products-name-eng,
+      .view-button {
+        display: block;
+        visibility: visible;
+
+        @include text-style(10, $white);
+      }
+    }
   }
 
   @include responsive(T) {
     .products-item {
       width: 208px;
       height: 312px;
-
-      &.is-active {
-        width: 280px;
-        height: 400px;
-        background-color: $red;
-        opacity: 1;
-
-        .products-name-eng,
-        .view-button {
-          @include text-style(16, $white);
-        }
-
-        .view-button {
-          @include flexbox;
-          flex-direction: column;
-
-          span {
-            margin-bottom: 16px;
-          }
-        }
-      }
 
       i {
         margin-bottom: 16px;
@@ -131,6 +110,55 @@
           display: none;
           visibility: hidden;
           margin-bottom: 24px;
+        }
+      }
+
+      &.is-active {
+        width: 280px;
+        height: 400px;
+
+        .products-name-eng,
+        .view-button {
+          @include text-style(16, $white);
+        }
+
+        .view-button {
+          flex-direction: column;
+
+          span {
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .products-item {
+      width: 360px;
+      height: 240px;
+
+      .products-name {
+        @include text-style(18);
+      }
+
+      &.is-active {
+        width: 408px;
+        height: 272px;
+
+        .products-name-eng,
+        .view-button {
+          @include text-style(18);
+        }
+
+        .view-button {
+          @include flexbox;
+          flex-direction: row;
+
+          span {
+            margin-bottom: 0;
+            margin-right: 8px;
+          }
         }
       }
     }
