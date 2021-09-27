@@ -30,4 +30,21 @@ window.onload = function () {
         .querySelector('.simple-inquery-form')
         .classList.toggle('is-active')
     })
+
+  function productsItem(i) {
+    let selectItem = document.querySelectorAll('.products-item')[i]
+
+    selectItem.addEventListener('mouseenter', function () {
+      document.querySelectorAll('.products-item')[i].classList.add('is-active')
+    })
+
+    selectItem.addEventListener('mouseleave', function () {
+      document
+        .querySelectorAll('.products-item')
+        [i].classList.remove('is-active')
+    })
+  }
+
+  productsItem(0)
+  productsItem(1)
 }
