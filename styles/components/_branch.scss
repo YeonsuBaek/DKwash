@@ -1,0 +1,42 @@
+.branch {
+  &-item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    address,
+    a {
+      @include text-style(13, $secondary);
+    }
+
+    address {
+      font-style: normal;
+    }
+  }
+
+  &-title {
+    @include flexbox(start);
+
+    h3 {
+      margin-right: 4px;
+      @include text-style(16, $primary);
+    }
+
+    span {
+      padding: 2px 10px;
+      @include text-style(12, $white);
+      font-weight: 700;
+      border-radius: 100px;
+    }
+
+    .branch-open {
+      background-color: $red;
+    }
+
+    .branch-not-open {
+      background-color: $dark;
+    }
+  }
+}
