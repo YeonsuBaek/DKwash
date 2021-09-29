@@ -39,4 +39,23 @@
       background-color: $dark;
     }
   }
+
+  @include responsive(T) {
+    &-item {
+      address,
+      a {
+        @include text-style(14, $secondary);
+      }
+    }
+
+    &-title {
+      h3 {
+        @include text-style(18, $primary);
+      }
+
+      span {
+        @include text-style(13, $white);
+      }
+    }
+  }
 }

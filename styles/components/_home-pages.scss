@@ -16,8 +16,7 @@
 
   &-header-02 {
     @include flexbox;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin: 32px 0;
     @include text-style(24, $primary);
   }
 
@@ -91,6 +90,11 @@
       span {
         @include text-style(16);
       }
+    }
+
+    &-header-02 {
+      margin: 48px 0;
+      @include text-style(36);
     }
 
     .scroll {

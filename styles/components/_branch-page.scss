@@ -75,4 +75,56 @@
       }
     }
   }
+
+  @include responsive(T) {
+    height: calc(100vh - #{$gnb-height-md});
+
+    .branch {
+      &-count {
+        button {
+          @include text-style(16);
+        }
+
+        .up-to-4 {
+          width: 40px;
+          height: 40px;
+        }
+
+        .up-to-9 {
+          width: 48px;
+          height: 48px;
+        }
+
+        .up-to-20 {
+          width: 56px;
+          height: 56px;
+        }
+
+        .gyeonggi {
+          top: 22%;
+          left: 42%;
+        }
+
+        .gangwon {
+          top: 15%;
+          right: 32%;
+        }
+
+        .daejeon {
+          top: 38%;
+          left: 42%;
+        }
+
+        .jeollanam {
+          bottom: 30%;
+          left: 38%;
+        }
+
+        .gyeongsangnam {
+          bottom: 35%;
+          right: 32%;
+        }
+      }
+    }
+  }
 }
