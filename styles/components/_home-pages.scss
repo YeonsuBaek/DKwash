@@ -162,6 +162,10 @@
         background-color: rgba(225, 225, 225, 0.2);
       }
 
+      &.dark:hover {
+        background-color: rgba(63, 65, 80, 0.1);
+      }
+
       a {
         @include text-style(16);
       }
