@@ -78,6 +78,25 @@
     }
   }
 
+  .view-button {
+    width: 120px;
+    height: 40px;
+    border: 1px solid $white;
+
+    a {
+      @include text-style(14, $white);
+      font-weight: 500;
+    }
+
+    &.dark {
+      border-color: $dark;
+
+      a {
+        color: $dark;
+      }
+    }
+  }
+
   @include responsive(T) {
     &-header {
       margin-top: 80px;
@@ -115,6 +134,21 @@
 
       i {
         font-size: 32px;
+      }
+    }
+
+    .view-button {
+      width: 152px;
+      height: 48px;
+      background-color: transparent;
+      transition: background-color 200ms ease-in-out;
+
+      &:hover {
+        background-color: rgba(225, 225, 225, 0.2);
+      }
+
+      a {
+        @include text-style(16);
       }
     }
   }
