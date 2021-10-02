@@ -1,0 +1,17 @@
+.youtube-page {
+  height: calc(100vh - #{$gnb-height-sm});
+
+  .video-wrapper {
+    @include flexbox;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    iframe:first-child {
+      margin-bottom: 8px;
+    }
+  }
+
+  .view-button {
+    @include pos-center-x;
+  }
+}
