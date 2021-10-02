@@ -2,6 +2,7 @@
   "semi": false,
   "singleQuote": true,
   "endOfLine": "lf",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "tabWidth": 2,
   "useTabs": false
 }
