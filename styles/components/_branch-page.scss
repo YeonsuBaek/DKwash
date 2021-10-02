@@ -127,4 +127,32 @@
       }
     }
   }
+
+  @include responsive(D) {
+    .branch {
+      &-map {
+        position: static;
+        @include flexbox;
+        height: 496px;
+
+        .map {
+          width: auto;
+          height: 100%;
+
+          .place {
+            transition: fill 200ms ease-in-out;
+          }
+
+          .place:hover {
+            fill: $red-dark;
+          }
+
+          .place:active,
+          .place.is-active {
+            fill: $red;
+          }
+        }
+      }
+    }
+  }
 }

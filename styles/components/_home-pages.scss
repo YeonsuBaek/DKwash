@@ -16,7 +16,7 @@
 
   &-header-02 {
     @include flexbox;
-    margin: 32px 0;
+    padding: 32px 0;
     @include text-style(24, $primary);
   }
 
@@ -93,7 +93,7 @@
     }
 
     &-header-02 {
-      margin: 48px 0;
+      padding: 48px 0;
       @include text-style(36);
     }
 
@@ -133,6 +133,11 @@
       }
     }
 
+    &-header-02 {
+      padding: 64px 0;
+      @include text-style(48);
+    }
+
     .scroll {
       span {
         margin-right: 24px;
@@ -153,6 +158,16 @@
           background-color: $white;
           border-radius: 1px;
           animation: mouse-down 0.6s infinite alternate;
+        }
+      }
+
+      &.dark {
+        .icon-mouse {
+          border-color: $tertiary;
+
+          &::after {
+            background-color: $tertiary;
+          }
         }
       }
     }
