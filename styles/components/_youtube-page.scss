@@ -14,4 +14,29 @@
   .view-button {
     @include pos-center-x;
   }
+
+  @include responsive(T) {
+    height: calc(100vh - #{$gnb-height-md});
+
+    .video-wrapper {
+      margin-bottom: 48px;
+    }
+
+    iframe {
+      width: 560px;
+      height: 315px;
+    }
+  }
+
+  @include responsive(D) {
+    .video-wrapper {
+      flex-direction: row;
+      margin-bottom: 64px;
+
+      iframe:first-child {
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+    }
+  }
 }

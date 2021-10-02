@@ -24,7 +24,7 @@
     }
 
     p {
-      @include text-style(13);
+      @include text-style(13, $primary);
     }
   }
 
@@ -121,7 +121,14 @@
 
     &-header-02 {
       padding: 48px 0;
-      @include text-style(36);
+
+      h1 {
+        @include text-style(36);
+      }
+
+      p {
+        @include text-style(14);
+      }
     }
 
     .scroll {
@@ -177,7 +184,14 @@
 
     &-header-02 {
       padding: 64px 0;
-      @include text-style(48);
+
+      h1 {
+        @include text-style(48);
+      }
+
+      p {
+        @include text-style(16);
+      }
     }
 
     .scroll {
