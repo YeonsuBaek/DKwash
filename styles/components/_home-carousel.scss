@@ -78,8 +78,13 @@
     @include pos-center-x;
     bottom: 120px;
     @include flexbox;
+    width: $position-sm;
+    height: 40px;
+    border: 1px solid $white;
 
     a {
+      @include text-style(14, $white);
+      font-weight: 500;
       font-family: $font-eng;
     }
   }
@@ -138,6 +143,18 @@
 
     .view-button {
       bottom: 152px;
+      width: $position-md;
+      height: 48px;
+      background-color: transparent;
+      transition: background-color 200ms ease-in-out;
+
+      &:hover {
+        background-color: rgba(225, 225, 225, 0.2);
+      }
+
+      a {
+        @include text-style(16);
+      }
     }
   }
 }

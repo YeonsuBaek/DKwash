@@ -13,6 +13,14 @@
 
   .view-button {
     @include pos-center-x;
+    width: 136px;
+    height: 32px;
+    border: 1px solid $dark;
+
+    a {
+      @include text-style(14, $dark);
+      font-weight: 500;
+    }
   }
 
   @include responsive(T) {
@@ -25,6 +33,21 @@
     iframe {
       width: 560px;
       height: 315px;
+    }
+
+    .view-button {
+      width: 152px;
+      height: 40px;
+      background-color: transparent;
+      transition: background-color 200ms ease-in-out;
+
+      &:hover {
+        background-color: rgba(63, 65, 80, 0.1);
+      }
+
+      a {
+        @include text-style(16);
+      }
     }
   }
 
