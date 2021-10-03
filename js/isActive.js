@@ -5,8 +5,10 @@ window.onload = function () {
   })
 
   document.querySelector('.overlay').addEventListener('click', function () {
-    document.querySelector('.sidebar').classList.remove('is-active')
     document.querySelector('.overlay').classList.remove('is-active')
+    document.querySelector('.sidebar').classList.remove('is-active')
+    document.querySelector('.inquery-form').classList.remove('is-active')
+    document.querySelector('.branch-modal').classList.remove('is-active')
   })
 
   document
