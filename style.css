@@ -866,6 +866,9 @@ ol {
     .gnb-nav-item.is-active a {
       color: #d7000f; }
 
+.drawer-menu.is-active h3 {
+  color: #d7000f; }
+
 .drawer-menu.is-active i {
   transform: rotate(-90deg); }
 
@@ -1098,144 +1101,128 @@ ol {
           margin-right: 20px;
           font-size: 32px; } }
 
-.home-pages {
-  position: relative; }
-  .home-pages-header {
-    margin-top: 48px; }
-    .home-pages-header h2 {
-      margin-bottom: 4px;
-      font-size: 24px;
-      line-height: 34px;
-      letter-spacing: -0.02em;
-      color: #fff; }
-    .home-pages-header span {
-      font-size: 12px;
-      line-height: 16px;
-      letter-spacing: -0.005em;
-      color: #fff; }
-  .home-pages-header-02 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 32px 0; }
-    .home-pages-header-02 h1 {
-      font-size: 24px;
-      line-height: 34px;
-      letter-spacing: -0.02em;
-      color: #3f4150; }
-    .home-pages-header-02 p {
-      font-size: 13px;
-      line-height: 20px;
-      letter-spacing: -0.01em;
-      color: #3f4150; }
-  .home-pages .scroll {
-    position: absolute;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 64px;
-    left: -32px;
-    transform: rotate(90deg); }
-    .home-pages .scroll span {
-      font-family: "Gmarket Sans", sans-serif;
-      color: #fff;
-      font-size: 8px;
-      font-weight: 500;
-      margin-right: 4px;
-      opacity: 0.8; }
-    .home-pages .scroll i {
-      font-size: 24px;
-      color: #fff;
-      animation: scroll-down 0.6s infinite alternate; }
-    .home-pages .scroll.dark span {
-      color: #b2b3b9; }
-    .home-pages .scroll.dark i {
-      color: #b2b3b9; }
-  .home-pages .top-button {
-    position: absolute;
-    bottom: 24px;
-    right: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    opacity: 0.5; }
-    .home-pages .top-button i {
-      font-size: 24px;
-      color: #191a20;
-      transform: rotate(-90deg); }
-    .home-pages .top-button.dark {
-      background-color: #b2b3b9; }
-      .home-pages .top-button.dark i {
-        color: #fff; }
-  .home-pages .view-button {
-    width: 120px;
-    height: 40px;
-    border: 1px solid #fff; }
-    .home-pages .view-button a {
-      font-size: 14px;
-      line-height: 24px;
-      letter-spacing: -0.01em;
-      color: #fff;
-      font-weight: 500; }
-    .home-pages .view-button.dark {
-      border-color: #191a20; }
-      .home-pages .view-button.dark a {
-        color: #191a20; }
-  @media screen and (min-width: 768px) {
+.home {
+  max-height: calc(100vh - 56px);
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+  .home::-webkit-scrollbar {
+    display: none; }
+  .home-pages {
+    position: relative;
+    scroll-snap-align: start; }
     .home-pages-header {
-      margin-top: 80px; }
+      margin-top: 48px; }
       .home-pages-header h2 {
-        margin-bottom: 8px;
-        font-size: 36px;
-        line-height: 40px;
-        letter-spacing: -0.01em; }
+        margin-bottom: 4px;
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: -0.02em;
+        color: #fff; }
       .home-pages-header span {
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.01em; }
-    .home-pages-header-02 {
-      padding: 48px 0; }
-      .home-pages-header-02 h1 {
-        font-size: 36px;
-        line-height: 40px;
-        letter-spacing: -0.01em; }
-      .home-pages-header-02 p {
-        font-size: 14px;
-        line-height: 24px;
-        letter-spacing: -0.01em; }
-    .home-pages .scroll {
-      bottom: 100px;
-      left: -16px; }
-      .home-pages .scroll span {
         font-size: 12px;
         line-height: 16px;
         letter-spacing: -0.005em;
+        color: #fff; }
+    .home-pages-header-02 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 32px 0; }
+      .home-pages-header-02 h1 {
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: -0.02em;
+        color: #3f4150; }
+      .home-pages-header-02 p {
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.01em;
+        color: #3f4150; }
+    .home-pages .scroll {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 64px;
+      left: -32px;
+      transform: rotate(90deg); }
+      .home-pages .scroll span {
+        font-family: "Gmarket Sans", sans-serif;
         color: #fff;
-        margin-right: 8px; }
+        font-size: 8px;
+        font-weight: 500;
+        margin-right: 4px;
+        opacity: 0.8; }
+      .home-pages .scroll i {
+        font-size: 24px;
+        color: #fff;
+        animation: scroll-down 0.6s infinite alternate; }
+      .home-pages .scroll.dark span {
+        color: #b2b3b9; }
+      .home-pages .scroll.dark i {
+        color: #b2b3b9; }
     .home-pages .top-button {
-      bottom: 48px;
-      right: 40px;
-      width: 48px;
-      height: 48px; }
+      position: absolute;
+      bottom: 24px;
+      right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      opacity: 0.5; }
       .home-pages .top-button i {
-        font-size: 32px; }
-    .home-pages .view-button {
-      width: 152px;
-      height: 48px;
-      background-color: transparent;
-      transition: background-color 200ms ease-in-out; }
-      .home-pages .view-button:hover {
-        background-color: rgba(225, 225, 225, 0.2); }
-      .home-pages .view-button.dark:hover {
-        background-color: rgba(63, 65, 80, 0.1); }
-      .home-pages .view-button a {
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.01em; } }
+        font-size: 24px;
+        color: #191a20;
+        transform: rotate(-90deg); }
+      .home-pages .top-button.dark {
+        background-color: #b2b3b9; }
+        .home-pages .top-button.dark i {
+          color: #fff; }
+  @media screen and (min-width: 768px) {
+    .home {
+      max-height: calc(100vh - 80px); }
+      .home-pages-header {
+        margin-top: 80px; }
+        .home-pages-header h2 {
+          margin-bottom: 8px;
+          font-size: 36px;
+          line-height: 40px;
+          letter-spacing: -0.01em; }
+        .home-pages-header span {
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -0.01em; }
+      .home-pages-header-02 {
+        padding: 48px 0; }
+        .home-pages-header-02 h1 {
+          font-size: 36px;
+          line-height: 40px;
+          letter-spacing: -0.01em; }
+        .home-pages-header-02 p {
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: -0.01em; }
+      .home-pages .scroll {
+        bottom: 100px;
+        left: -16px; }
+        .home-pages .scroll span {
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: -0.005em;
+          color: #fff;
+          margin-right: 8px; }
+      .home-pages .top-button {
+        bottom: 48px;
+        right: 40px;
+        width: 48px;
+        height: 48px; }
+        .home-pages .top-button i {
+          font-size: 32px; } }
   @media screen and (min-width: 1200px) {
     .home-pages-header {
       margin-top: 120px; }
@@ -1360,8 +1347,16 @@ ol {
     bottom: 120px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    border: 1px solid #fff; }
     .home-carousel .view-button a {
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      color: #fff;
+      font-weight: 500;
       font-family: "Gmarket Sans", sans-serif; }
   .home-carousel-pagination {
     position: absolute;
@@ -1402,7 +1397,17 @@ ol {
         line-height: 40px;
         letter-spacing: -0.01em; }
     .home-carousel .view-button {
-      bottom: 152px; } }
+      bottom: 152px;
+      width: 152px;
+      height: 48px;
+      background-color: transparent;
+      transition: background-color 200ms ease-in-out; }
+      .home-carousel .view-button:hover {
+        background-color: rgba(225, 225, 225, 0.2); }
+      .home-carousel .view-button a {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em; } }
 
 @keyframes text-slide-up {
   100% {
@@ -1931,7 +1936,16 @@ ol {
   .youtube-page .view-button {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    width: 136px;
+    height: 32px;
+    border: 1px solid #191a20; }
+    .youtube-page .view-button a {
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      color: #191a20;
+      font-weight: 500; }
   @media screen and (min-width: 768px) {
     .youtube-page {
       height: calc(100vh - 80px); }
@@ -1939,7 +1953,18 @@ ol {
         margin-bottom: 48px; }
       .youtube-page iframe {
         width: 560px;
-        height: 315px; } }
+        height: 315px; }
+      .youtube-page .view-button {
+        width: 152px;
+        height: 40px;
+        background-color: transparent;
+        transition: background-color 200ms ease-in-out; }
+        .youtube-page .view-button:hover {
+          background-color: rgba(63, 65, 80, 0.1); }
+        .youtube-page .view-button a {
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -0.01em; } }
   @media screen and (min-width: 1200px) {
     .youtube-page .video-wrapper {
       flex-direction: row;
