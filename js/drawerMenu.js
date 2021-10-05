@@ -1,5 +1,5 @@
 function drawerMenu(i) {
-  let selectItem = document.querySelectorAll('.drawer-menu')[i]
+  const selectItem = document.querySelectorAll('.drawer-menu')[i]
 
   selectItem.addEventListener('click', function () {
     selectItem.classList.toggle('is-active')
