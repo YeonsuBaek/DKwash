@@ -24,4 +24,14 @@
       }
     }
   }
+
+  @include responsive(D) {
+    &-banner {
+      height: 200px;
+
+      &-title {
+        @include text-style(36);
+      }
+    }
+  }
 }
