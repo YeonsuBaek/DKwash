@@ -1,4 +1,6 @@
 .gnb-nav {
+  margin-right: 120px;
+
   &-list {
     @include flexbox(start);
   }
@@ -10,13 +12,15 @@
 
     a {
       @include flexbox;
-      padding: 26px;
+      padding: 26px 40px;
       @include text-style(18, $primary);
       font-weight: 700;
       transition: color 200ms ease-in-out;
     }
 
     &:hover {
+      border-color: $red;
+
       a {
         color: $red;
       }
