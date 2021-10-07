@@ -1,0 +1,17 @@
+.sub {
+  &-banner {
+    @include flexbox;
+    width: 100%;
+    height: 96px;
+    margin-bottom: 64px;
+    background: url('./assets/images/img-banner-01.jpg'), rgba(0, 0, 0, 0.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+
+    &-title {
+      @include text-style(18, $white);
+    }
+  }
+}
