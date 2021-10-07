@@ -39,7 +39,8 @@
       @include text-style(12, $dark);
     }
 
-    &:active {
+    &:active,
+    &:hover {
       background-color: rgba(63, 65, 80, 0.1);
     }
   }
@@ -55,6 +56,40 @@
       height: 100%;
       object-fit: cover;
       object-position: top;
+    }
+  }
+
+  @include responsive(T) {
+    &-title {
+      @include text-style(36);
+
+      &::after {
+        height: 96px;
+        margin: 36px 0;
+      }
+    }
+
+    &-detail {
+      margin-bottom: 48px;
+      @include text-style(18);
+
+      &::last-child {
+        margin-bottom: 96px;
+      }
+    }
+
+    .view-button {
+      padding: 8px 32px;
+      margin-bottom: 64px;
+
+      a {
+        @include text-style(13);
+      }
+    }
+
+    &-img {
+      height: 200px;
+      margin-bottom: 64px;
     }
   }
 }

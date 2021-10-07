@@ -14,4 +14,14 @@
       @include text-style(18, $white);
     }
   }
+
+  @include responsive(T) {
+    &-banner {
+      height: 160px;
+
+      &-title {
+        @include text-style(24);
+      }
+    }
+  }
 }
