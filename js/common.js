@@ -32,4 +32,28 @@ window.onload = function () {
         .querySelector('.simple-inquery-form')
         .classList.toggle('is-active')
     })
+
+  document
+    .querySelector('.gnb-nav.lg-only')
+    .addEventListener('mouseenter', function () {
+      document.querySelector('.gnb-sub.lg-only').classList.add('is-active')
+    })
+
+  document
+    .querySelector('.gnb-sub.lg-only')
+    .addEventListener('mouseenter', function () {
+      document.querySelector('.gnb-sub.lg-only').classList.add('is-active')
+    })
+
+  document
+    .querySelector('.gnb-nav.lg-only')
+    .addEventListener('mouseleave', function () {
+      document.querySelector('.gnb-sub.lg-only').classList.remove('is-active')
+    })
+
+  document
+    .querySelector('.gnb-sub.lg-only')
+    .addEventListener('mouseleave', function () {
+      document.querySelector('.gnb-sub.lg-only').classList.remove('is-active')
+    })
 }
