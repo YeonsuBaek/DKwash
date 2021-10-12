@@ -143,13 +143,13 @@
             transition: fill 200ms ease-in-out;
           }
 
-          .place:hover {
-            fill: $red-dark;
-          }
-
-          .place:active,
+          .place:hover,
           .place.is-active {
             fill: $red;
+          }
+
+          .place:active {
+            fill: $red-dark;
           }
         }
       }
