@@ -188,6 +188,14 @@
         i {
           color: $tertiary;
         }
+
+        &.is-active {
+          background-color: $primary;
+
+          i {
+            color: $white;
+          }
+        }
       }
     }
 
