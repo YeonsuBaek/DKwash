@@ -15,12 +15,40 @@
     }
   }
 
+  &-title {
+    @include flexbox;
+    flex-direction: column;
+    @include text-style(24, $dark);
+    font-weight: 700;
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 64px;
+      margin: 24px 0;
+      background-color: $border;
+    }
+
+    &.eng {
+      font-family: $font-eng;
+    }
+  }
+
   @include responsive(T) {
     &-banner {
       height: 160px;
 
       &-title {
         @include text-style(24);
+      }
+    }
+
+    &-title {
+      @include text-style(36);
+
+      &::after {
+        height: 96px;
+        margin: 36px 0;
       }
     }
   }
@@ -31,6 +59,15 @@
 
       &-title {
         @include text-style(36);
+      }
+    }
+
+    &-title {
+      @include text-style(48);
+
+      &::after {
+        height: 120px;
+        margin: 48px 0;
       }
     }
   }

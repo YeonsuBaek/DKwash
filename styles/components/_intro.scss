@@ -1,20 +1,4 @@
 .intro {
-  &-title {
-    @include flexbox;
-    flex-direction: column;
-    font-family: $font-eng;
-    @include text-style(24, $dark);
-    font-weight: 700;
-
-    &::after {
-      content: '';
-      width: 1px;
-      height: 64px;
-      margin: 24px 0;
-      background-color: $border;
-    }
-  }
-
   &-detail {
     margin-bottom: 32px;
     @include text-style(12, $primary);
@@ -60,15 +44,6 @@
   }
 
   @include responsive(T) {
-    &-title {
-      @include text-style(36);
-
-      &::after {
-        height: 96px;
-        margin: 36px 0;
-      }
-    }
-
     &-detail {
       margin-bottom: 48px;
       @include text-style(18);
@@ -94,15 +69,6 @@
   }
 
   @include responsive(D) {
-    &-title {
-      @include text-style(48);
-
-      &::after {
-        height: 120px;
-        margin: 48px 0;
-      }
-    }
-
     &-detail {
       margin-bottom: 64px;
       @include text-style(24);
