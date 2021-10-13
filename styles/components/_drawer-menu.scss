@@ -45,7 +45,8 @@
     @include text-style(16, $primary);
     border-top: 1px solid $border;
 
-    &:active {
+    &:active,
+    &.is-active {
       h3 {
         color: $red;
       }
@@ -81,7 +82,8 @@
     @include text-style(13, $primary);
     font-weight: 700;
 
-    &:active {
+    &:active,
+    &.is-active {
       color: $red;
     }
   }
