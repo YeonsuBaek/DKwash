@@ -11,7 +11,7 @@
     @include flexbox;
     width: 280px;
     height: $nav-height-sm;
-    margin: 0 auto;
+    margin: 0 auto 24px;
     border: 1px solid $border;
     border-radius: #{$nav-height-sm / 2};
 
@@ -53,10 +53,95 @@
         color: $dark;
       }
     }
+  }
 
-    @include responsive(D) {
+  &-item {
+    @include flexbox(start);
+    padding: 20px 0;
+    border-bottom: 1px solid $border;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .chemical-image {
+      @include flexbox;
+      width: 96px;
+      height: 96px;
+      margin-right: 16px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .chemical-title {
+      @include flexbox(start, start);
+      flex-direction: column;
+      width: 100%;
+
+      strong {
+        @include text-style(14, $primary);
+        font-weight: 500;
+      }
+
+      h2 {
+        @include text-style(14, $dark);
+      }
+
+      &:active {
+        strong {
+          color: $secondary;
+        }
+
+        h2 {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-nav {
+      margin-bottom: 48px;
+    }
+
+    &-list {
+      @include flexbox(between);
+    }
+
+    &-item {
+      flex-direction: column;
+      width: 25%;
+      padding: 0 10px;
+      border-bottom: 0;
+
+      .chemical-image {
+        width: 128px;
+        height: 128px;
+        margin-right: 0;
+        margin-bottom: 24px;
+      }
+
+      .chemical-title {
+        @include flexbox(start);
+
+        strong,
+        h2 {
+          @include text-style(16);
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-nav {
       width: 640px;
       height: $nav-height-lg;
+      margin-bottom: 80px;
       border-radius: #{$nav-height-lg / 2};
 
       &::before {
@@ -75,7 +160,26 @@
       button {
         width: $button-width-lg;
         height: $button-height-lg;
+        @include text-style(24);
         border-radius: #{$nav-height-lg / 2};
+      }
+    }
+
+    &-item {
+      cursor: pointer;
+
+      .chemical-image {
+        width: 192px;
+        height: 192px;
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+
+      .chemical-title {
+        strong,
+        h2 {
+          @include text-style(18);
+        }
       }
     }
   }
