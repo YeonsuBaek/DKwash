@@ -55,9 +55,19 @@
     }
   }
 
+  &-list {
+    display: none;
+    visibility: hidden;
+
+    &.is-active {
+      display: block;
+      visibility: visible;
+    }
+  }
+
   &-item {
     @include flexbox(start);
-    padding: 20px 0;
+    padding: 8px 8px;
     border-bottom: 1px solid $border;
 
     &:last-child {
@@ -109,14 +119,20 @@
     }
 
     &-list {
-      @include flexbox(between);
+      flex-wrap: wrap;
+
+      &.is-active {
+        @include flexbox(between);
+      }
     }
 
     &-item {
       flex-direction: column;
       width: 25%;
-      padding: 0 10px;
+      margin-bottom: 16px;
       border-bottom: 0;
+      flex-basis: 25%;
+      flex-grow: 1;
 
       .chemical-image {
         width: 128px;
