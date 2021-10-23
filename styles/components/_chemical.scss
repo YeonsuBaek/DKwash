@@ -1,0 +1,82 @@
+.chemical {
+  $nav-height-sm: 48px;
+  $button-width-sm: 136px;
+  $button-height-sm: 40px;
+  $nav-height-lg: 80px;
+  $button-width-lg: 312px;
+  $button-height-lg: 64px;
+
+  &-nav {
+    position: relative;
+    @include flexbox;
+    width: 280px;
+    height: $nav-height-sm;
+    margin: 0 auto;
+    border: 1px solid $border;
+    border-radius: #{$nav-height-sm / 2};
+
+    &::before {
+      position: absolute;
+      left: 4px;
+      content: '';
+      width: $button-width-sm;
+      height: $button-height-sm;
+      border-radius: #{$nav-height-sm / 2};
+      background-color: $red;
+      z-index: -10;
+      transition: left 200ms ease-in-out;
+    }
+
+    &.is-detail {
+      &::before {
+        left: #{$button-width-sm + 2px};
+      }
+
+      button {
+        color: $dark;
+
+        &.detail {
+          color: $white;
+        }
+      }
+    }
+
+    button {
+      width: $button-width-sm;
+      height: $button-height-sm;
+      border-radius: #{$nav-height-sm / 2};
+      @include text-style(16, $white);
+      font-weight: 700;
+      transition: color 200ms ease-in-out;
+
+      &.detail {
+        color: $dark;
+      }
+    }
+
+    @include responsive(D) {
+      width: 640px;
+      height: $nav-height-lg;
+      border-radius: #{$nav-height-lg / 2};
+
+      &::before {
+        left: 8px;
+        width: $button-width-lg;
+        height: $button-height-lg;
+        border-radius: #{$nav-height-lg / 2};
+      }
+
+      &.is-detail {
+        &::before {
+          left: #{$button-width-lg + 4px};
+        }
+      }
+
+      button {
+        width: $button-width-lg;
+        height: $button-height-lg;
+        border-radius: #{$nav-height-lg / 2};
+      }
+    }
+  }
+}
