@@ -2333,4 +2333,156 @@ ol {
       .field-explain-image {
         height: 400px; } }
 
+.chemical-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 48px;
+  margin: 0 auto 24px;
+  border: 1px solid #e0e2e7;
+  border-radius: 24px; }
+  .chemical-nav::before {
+    position: absolute;
+    left: 4px;
+    content: '';
+    width: 136px;
+    height: 40px;
+    border-radius: 24px;
+    background-color: #d7000f;
+    z-index: -10;
+    transition: left 200ms ease-in-out; }
+  .chemical-nav.is-detail::before {
+    left: 138px; }
+  .chemical-nav.is-detail button {
+    color: #191a20; }
+    .chemical-nav.is-detail button.detail {
+      color: #fff; }
+  .chemical-nav button {
+    width: 136px;
+    height: 40px;
+    border-radius: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #fff;
+    font-weight: 700;
+    transition: color 200ms ease-in-out; }
+    .chemical-nav button.detail {
+      color: #191a20; }
+
+.chemical-list {
+  display: none;
+  visibility: hidden; }
+  .chemical-list.is-active {
+    display: block;
+    visibility: visible; }
+
+.chemical-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 8px;
+  border-bottom: 1px solid #e0e2e7; }
+  .chemical-item:last-child {
+    border-bottom: 0; }
+  .chemical-item .chemical-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    margin-right: 16px; }
+    .chemical-item .chemical-image img {
+      display: block;
+      width: 100%;
+      height: auto; }
+  .chemical-item .chemical-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%; }
+    .chemical-item .chemical-title strong {
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      color: #3f4150;
+      font-weight: 500; }
+    .chemical-item .chemical-title h2 {
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      color: #191a20; }
+    .chemical-item .chemical-title:active strong {
+      color: #8c8d96; }
+    .chemical-item .chemical-title:active h2 {
+      color: #3f4150; }
+
+@media screen and (min-width: 768px) {
+  .chemical-nav {
+    margin-bottom: 48px; }
+  .chemical-list {
+    flex-wrap: wrap; }
+    .chemical-list.is-active {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+  .chemical-item {
+    flex-direction: column;
+    width: 25%;
+    margin-bottom: 16px;
+    border-bottom: 0;
+    flex-basis: 25%;
+    flex-grow: 1; }
+    .chemical-item .chemical-image {
+      width: 128px;
+      height: 128px;
+      margin-right: 0;
+      margin-bottom: 24px; }
+    .chemical-item .chemical-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+      .chemical-item .chemical-title strong,
+      .chemical-item .chemical-title h2 {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        text-align: center; } }
+
+@media screen and (min-width: 1200px) {
+  .chemical-nav {
+    width: 640px;
+    height: 80px;
+    margin-bottom: 80px;
+    border-radius: 40px; }
+    .chemical-nav::before {
+      left: 8px;
+      width: 312px;
+      height: 64px;
+      border-radius: 40px; }
+    .chemical-nav.is-detail::before {
+      left: 316px; }
+    .chemical-nav button {
+      width: 312px;
+      height: 64px;
+      font-size: 24px;
+      line-height: 34px;
+      letter-spacing: -0.02em;
+      border-radius: 40px; }
+  .chemical-item {
+    cursor: pointer; }
+    .chemical-item .chemical-image {
+      width: 192px;
+      height: 192px;
+      margin-right: 0;
+      margin-bottom: 40px; }
+    .chemical-item .chemical-title strong,
+    .chemical-item .chemical-title h2 {
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: -0.02em; } }
+
 /*# sourceMappingURL=style.css.map */
