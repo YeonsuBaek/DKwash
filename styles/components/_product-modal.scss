@@ -1,0 +1,70 @@
+.product-modal {
+  $modal-height-sm: 400px;
+  $title-height-sm: 52px;
+
+  @include pos-center;
+  width: 290px;
+  height: $modal-height-sm;
+  background-color: $white;
+
+  z-index: $product-modal-level;
+
+  &-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $title-height-sm;
+    border-bottom: 1px solid $border;
+
+    h1 {
+      @include pos-center;
+      @include text-style(18, $dark);
+    }
+
+    .close-button {
+      @include pos-center-y;
+      right: 16px;
+
+      i {
+        color: $tertiary;
+        font-size: 24px;
+      }
+    }
+  }
+
+  &-content {
+    height: #{$modal-height-sm - $title-height-sm};
+    margin-top: $title-height-sm;
+    padding: 0 24px 24px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-image {
+    @include flexbox;
+    width: 160px;
+    height: 160px;
+    margin: 16px auto;
+
+    img {
+      display: block;
+      width: 120px;
+      height: auto;
+    }
+  }
+
+  &-wrapper {
+    h2 {
+      @include text-style(16, $primary);
+      margin-bottom: 16px;
+    }
+
+    p {
+      @include text-style(13, $secondary);
+    }
+  }
+}
