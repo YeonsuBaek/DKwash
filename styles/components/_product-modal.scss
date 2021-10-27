@@ -1,12 +1,15 @@
 .product-modal {
   $modal-height-sm: 400px;
+  $modal-height-md: 528px;
+  $modal-height-lg: 448px;
   $title-height-sm: 52px;
+  $title-height-md: 64px;
+  $title-height-lg: 80px;
 
   @include pos-center;
   width: 290px;
   height: $modal-height-sm;
   background-color: $white;
-
   z-index: $product-modal-level;
 
   &-title {
@@ -16,6 +19,7 @@
     width: 100%;
     height: $title-height-sm;
     border-bottom: 1px solid $border;
+    background-color: $white;
 
     h1 {
       @include pos-center;
@@ -29,6 +33,12 @@
       i {
         color: $tertiary;
         font-size: 24px;
+      }
+
+      &:active {
+        i {
+          color: $secondary;
+        }
       }
     }
   }
@@ -65,6 +75,99 @@
 
     p {
       @include text-style(13, $secondary);
+    }
+  }
+
+  @include responsive(T) {
+    width: 452px;
+    height: $modal-height-md;
+
+    &-title {
+      height: $title-height-md;
+
+      h1 {
+        @include text-style(24);
+      }
+
+      .close-button {
+        right: 24px;
+
+        i {
+          font-size: 32px;
+        }
+      }
+    }
+
+    &-content {
+      height: #{$modal-height-md - $title-height-md};
+      margin-top: $title-height-md;
+      padding: 0 36px 36px;
+    }
+
+    &-image {
+      width: 196px;
+      height: 196px;
+      margin: 24px auto;
+
+      img {
+        width: 160px;
+      }
+    }
+
+    &-wrapper {
+      h2 {
+        @include text-style(18);
+        margin-bottom: 16px;
+      }
+
+      p {
+        @include text-style(14);
+      }
+    }
+  }
+
+  @include responsive(D) {
+    width: 1000px;
+    height: $modal-height-lg;
+
+    &-title {
+      height: $title-height-lg;
+
+      .close-button {
+        right: 32px;
+
+        i {
+          font-size: 36px;
+        }
+      }
+    }
+
+    &-content {
+      @include flexbox(start);
+      height: #{$modal-height-lg - $title-height-lg};
+      margin-top: $title-height-lg;
+      padding: 0 48px 48px;
+    }
+
+    &-image {
+      width: 280px;
+      height: 280px;
+      margin: 0 24px 0 0;
+
+      img {
+        width: 200px;
+      }
+    }
+
+    &-wrapper {
+      h2 {
+        @include text-style(24);
+        margin-bottom: 8px;
+      }
+
+      p {
+        @include text-style(16);
+      }
     }
   }
 }
