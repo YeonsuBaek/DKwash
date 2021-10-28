@@ -3,7 +3,11 @@
   overflow: hidden;
 
   .branch {
+    @include flexbox;
     width: 100%;
+    height: calc(
+      100vh - #{$gnb-height-sm + $header-padding-sm * 2 + $header-height-sm}
+    );
 
     &-map {
       position: relative;
@@ -81,6 +85,10 @@
     height: calc(100vh - #{$gnb-height-md});
 
     .branch {
+      height: calc(
+        100vh - #{$gnb-height-md + $header-padding-md * 2 + $header-height-md}
+      );
+
       &-count {
         button {
           @include text-style(16);
@@ -131,6 +139,10 @@
 
   @include responsive(D) {
     .branch {
+      height: calc(
+        100vh - #{$gnb-height-md + $header-padding-lg * 2 + $header-height-lg}
+      );
+
       &-map {
         position: static;
         @include flexbox;

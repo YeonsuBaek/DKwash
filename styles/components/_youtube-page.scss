@@ -1,6 +1,14 @@
 .youtube-page {
   height: calc(100vh - #{$gnb-height-sm});
 
+  .youtube-wrapper {
+    @include flexbox;
+    flex-direction: column;
+    height: calc(
+      100vh - #{$gnb-height-sm + $header-padding-sm * 2 + $header-height-sm}
+    );
+  }
+
   .video-wrapper {
     @include flexbox;
     flex-direction: column;
@@ -12,9 +20,9 @@
   }
 
   .view-button {
-    @include pos-center-x;
     width: 136px;
     height: 32px;
+    margin-bottom: 15%;
     border: 1px solid $dark;
 
     a {
@@ -25,6 +33,12 @@
 
   @include responsive(T) {
     height: calc(100vh - #{$gnb-height-md});
+
+    .youtube-wrapper {
+      height: calc(
+        100vh - #{$gnb-height-md + $header-padding-md * 2 + $header-height-md}
+      );
+    }
 
     .video-wrapper {
       margin-bottom: 48px;
