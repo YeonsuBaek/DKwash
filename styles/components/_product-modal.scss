@@ -101,6 +101,10 @@
     width: 452px;
     height: $modal-height-md;
 
+    &-item {
+      width: 100%;
+    }
+
     &-title {
       height: $title-height-md;
 
@@ -118,6 +122,7 @@
     }
 
     &-content {
+      width: 100%;
       height: #{$modal-height-md - $title-height-md};
       margin-top: $title-height-md;
       padding: 0 36px 36px;
@@ -148,6 +153,10 @@
   @include responsive(D) {
     width: 1000px;
     height: $modal-height-lg;
+
+    &-item {
+      width: 100%;
+    }
 
     &-title {
       height: $title-height-lg;
