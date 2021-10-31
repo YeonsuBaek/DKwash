@@ -1,0 +1,99 @@
+.location {
+  &-map {
+    @include flexbox;
+
+    .map {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-info {
+    padding: 24px;
+    background: $red url('../assets/images/logo-single.svg') no-repeat 95% 200%;
+    background-size: auto 80%;
+
+    &-title {
+      margin-bottom: 16px;
+
+      h2 {
+        @include text-style(24, $white);
+      }
+
+      p {
+        @include text-style(16, $white);
+        font-weight: 500;
+      }
+    }
+
+    &-detail {
+      @include flexbox(center, start);
+      flex-direction: column;
+    }
+
+    &-address,
+    &-tel {
+      @include flexbox(start);
+      color: $white;
+
+      i {
+        margin-right: 8px;
+        font-size: 20px;
+      }
+    }
+
+    &-address {
+      margin-bottom: 8px;
+
+      address {
+        @include text-style(16);
+        font-style: initial;
+        opacity: 0.8;
+      }
+    }
+
+    &-tel {
+      a {
+        @include text-style(16);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-info {
+      padding: 40px 56px;
+
+      &-title {
+        @include flexbox(start, end);
+
+        h2 {
+          margin-right: 8px;
+          @include text-style(36);
+        }
+
+        p {
+          @include text-style(18);
+        }
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-info {
+      background: $red url('../assets/images/logo-single.svg') no-repeat 95%
+        250%;
+      background-size: auto 90%;
+
+      &-detail {
+        @include flexbox(start, start);
+        flex-direction: row;
+      }
+
+      &-address {
+        margin-bottom: 0;
+        margin-right: 32px;
+      }
+    }
+  }
+}
