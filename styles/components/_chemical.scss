@@ -122,17 +122,15 @@
       flex-wrap: wrap;
 
       &.is-active {
-        @include flexbox(between);
+        @include flexbox(between, start);
       }
     }
 
     &-item {
       flex-direction: column;
-      width: 25%;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
       border-bottom: 0;
       flex-basis: 25%;
-      flex-grow: 1;
 
       .chemical-image {
         width: 128px;
