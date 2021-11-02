@@ -6,7 +6,7 @@
   $title-height-md: 64px;
   $title-height-lg: 80px;
 
-  @include pos-center;
+  @include pos-center(fixed);
   z-index: $product-modal-level;
   opacity: 0;
   visibility: hidden;
