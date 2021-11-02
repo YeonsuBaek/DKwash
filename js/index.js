@@ -29,4 +29,21 @@ window.onload = function () {
 
   productsItem(0)
   productsItem(1)
+
+  function scrollTop(i) {
+    let clickButton = document
+      .querySelectorAll('.top-button')
+      [i].addEventListener('click', function () {
+        document.querySelector('.home').scroll({
+          top: 0,
+          left: 0,
+          behavior: 'smooth',
+        })
+      })
+  }
+
+  scrollTop(0)
+  scrollTop(1)
+  scrollTop(2)
+  scrollTop(3)
 }
