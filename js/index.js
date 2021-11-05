@@ -47,3 +47,51 @@ window.onload = function () {
   scrollTop(2)
   scrollTop(3)
 }
+
+function recycle(k) {
+  document
+    .querySelectorAll('.info-page .info-item')
+    [k].classList.add('is-active')
+}
+
+function recycleRemove(k) {
+  document
+    .querySelectorAll('.info-page .info-item')
+    [k].classList.remove('is-active')
+}
+
+let k = 0
+
+function myLoop() {
+  setTimeout(function () {
+    for (l = 0; l < 5; l++) {
+      recycleRemove(l)
+
+      if (l == k) {
+        recycle(l)
+      }
+    }
+    k++
+    if (k < 5) {
+      myLoop()
+    }
+
+    if (k == 5) {
+      k = 0
+
+      myLoop()
+    }
+  }, 3000)
+}
+
+myLoop()
+
+function zigzag() {
+  document.querySelectorAll('.products-item')[0].classList.toggle('is-active')
+}
+
+zigzag()
+setInterval(zigzag, 4000)
+setInterval(function () {
+  document.querySelectorAll('.products-item')[1].classList.toggle('is-active')
+}, 4000)
