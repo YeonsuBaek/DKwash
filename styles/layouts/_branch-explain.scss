@@ -1,0 +1,74 @@
+.branch-explain {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  address,
+  a {
+    @include text-style(13, $secondary);
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  &-title {
+    @include flexbox(start);
+
+    h3 {
+      margin-right: 4px;
+      @include text-style(16, $primary);
+    }
+
+    span {
+      padding: 2px 10px;
+      @include text-style(12, $white);
+      font-weight: 700;
+      border-radius: 100px;
+    }
+
+    .branch-open {
+      background-color: $red;
+    }
+
+    .branch-not-open {
+      background-color: $dark;
+    }
+  }
+
+  @include responsive(T) {
+    address,
+    a {
+      @include text-style(14, $secondary);
+    }
+
+    &-title {
+      h3 {
+        @include text-style(18, $primary);
+      }
+
+      span {
+        @include text-style(13, $white);
+      }
+    }
+  }
+
+  @include responsive(D) {
+    address,
+    a {
+      @include text-style(18, $secondary);
+    }
+
+    &-title {
+      h3 {
+        @include text-style(24, $primary);
+      }
+
+      span {
+        @include text-style(14, $white);
+      }
+    }
+  }
+}
