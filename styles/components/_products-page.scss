@@ -52,7 +52,7 @@
       .arr {
         position: relative;
         width: 40px;
-        margin: 5px 0 0 0;
+        margin: 4px auto 0;
         border-top: 1px solid #fff;
         animation: scroll 1s infinite alternate;
 
@@ -69,7 +69,8 @@
       }
     }
 
-    &.is-active {
+    &.is-active,
+    &:hover {
       width: 112px;
       height: 160px;
       background-color: $red;
@@ -124,6 +125,10 @@
 
         .view-button {
           flex-direction: column;
+
+          .arr {
+            margin: 24px auto 0;
+          }
 
           span {
             margin-bottom: 16px;

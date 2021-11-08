@@ -86,12 +86,36 @@ function myLoop() {
 
 myLoop()
 
-function zigzag() {
-  document.querySelectorAll('.products-item')[0].classList.toggle('is-active')
+function zigzag(x) {
+  document.querySelectorAll('.products-item')[x].classList.add('is-active')
 }
 
-zigzag()
-setInterval(zigzag, 4000)
-setInterval(function () {
-  document.querySelectorAll('.products-item')[1].classList.toggle('is-active')
-}, 4000)
+function zigzagRemove(x) {
+  document.querySelectorAll('.products-item')[x].classList.remove('is-active')
+}
+
+let x = 0
+
+function thisLoop() {
+  setTimeout(function () {
+    for (y = 0; y < 2; y++) {
+      zigzagRemove(y)
+
+      if (y == x) {
+        zigzag(y)
+      }
+    }
+    x++
+    if (x < 2) {
+      thisLoop()
+    }
+
+    if (x == 2) {
+      x = 0
+
+      thisLoop()
+    }
+  }, 3000)
+}
+
+thisLoop()
