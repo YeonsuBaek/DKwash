@@ -32,6 +32,10 @@
     &.eng {
       font-family: $font-eng;
     }
+
+    .red {
+      color: $red;
+    }
   }
 
   @include responsive(T) {
