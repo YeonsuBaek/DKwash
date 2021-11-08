@@ -1,17 +1,43 @@
 window.onload = function () {
-  document
-    .querySelector('.gyeonggi.up-to-9')
-    .addEventListener('click', function () {
-      document.querySelector('.branch-modal').classList.add('is-active')
-      document.querySelector('.overlay').classList.add('is-active')
-    })
+  function branchModalOpen(num) {
+    document
+      .querySelectorAll('.branch-button')
+      [num].addEventListener('click', function () {
+        document
+          .querySelectorAll('.branch-modal')
+          [num].classList.add('is-active')
+        document.querySelector('.overlay').classList.add('is-active')
+      })
+  }
 
-  document
-    .querySelector('.branch-modal .ic-close')
-    .addEventListener('click', function () {
-      document.querySelector('.branch-modal').classList.remove('is-active')
-      document.querySelector('.overlay').classList.remove('is-active')
+  branchModalOpen(0)
+  branchModalOpen(1)
+  branchModalOpen(2)
+  branchModalOpen(3)
+  branchModalOpen(4)
+
+  function branchModalRemove(z) {
+    document
+      .querySelectorAll('.branch-modal .ic-close')
+      [z].addEventListener('click', function () {
+        document
+          .querySelectorAll('.branch-modal')
+          [z].classList.remove('is-active')
+        document.querySelector('.overlay').classList.remove('is-active')
+      })
+
+    document.querySelector('.overlay').addEventListener('click', function () {
+      document
+        .querySelectorAll('.branch-modal')
+        [z].classList.remove('is-active')
     })
+  }
+
+  branchModalRemove(0)
+  branchModalRemove(1)
+  branchModalRemove(2)
+  branchModalRemove(3)
+  branchModalRemove(4)
 
   function productsItem(i) {
     let selectItem = document.querySelectorAll('.products-item')[i]
