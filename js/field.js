@@ -1,9 +1,11 @@
 function fieldItem(i) {
-  let selectItem = document.querySelectorAll('.field-item')[i]
+  let selectItem = document.querySelectorAll('.category-item')[i]
 
   selectItem.addEventListener('click', function () {
     for (j = 0; j <= 4; j++) {
-      document.querySelectorAll('.field-item')[j].classList.remove('is-active')
+      document
+        .querySelectorAll('.category-item')
+        [j].classList.remove('is-active')
       document
         .querySelectorAll('.field-explain')
         [j].classList.remove('is-active')
@@ -13,7 +15,7 @@ function fieldItem(i) {
       }
     }
 
-    document.querySelectorAll('.field-item')[i].classList.add('is-active')
+    selectItem.classList.add('is-active')
     document.querySelectorAll('.field-explain')[i].classList.add('is-active')
   })
 }
