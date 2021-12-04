@@ -24,6 +24,16 @@
     }
   }
 
+  &-list {
+    display: none;
+    visibility: hidden;
+
+    &.is-active {
+      display: block;
+      visibility: visible;
+    }
+  }
+
   @include responsive(T) {
     &-img {
       width: 120px;
