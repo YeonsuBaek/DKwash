@@ -1,31 +1,25 @@
-function branchCaseItem(i) {
-  document
-    .querySelectorAll('.category-item')
-    [i].addEventListener('click', function () {
-      for (j = 0; j < 7; j++) {
-        document
-          .querySelectorAll('.category-item')
-          [j].classList.remove('is-active')
-        document
-          .querySelectorAll('.branch-case-list')
-          [j].classList.remove('is-active')
+const branchCategoryButtonList = document.querySelectorAll('.category-item')
 
-        if (i == j) {
-          continue
-        }
-      }
+function toggleBranchContents() {
+  let currentActiveCategory = document.querySelector('.category-item.is-active')
+  let currentActiveContent = document.querySelector(
+    '.branch-case-list.is-active'
+  )
 
-      document.querySelectorAll('.category-item')[i].classList.add('is-active')
-      document
-        .querySelectorAll('.branch-case-list')
-        [i].classList.add('is-active')
-    })
+  if (currentActiveCategory !== branchCategoryButtonList) {
+    const branchContent = document.querySelector(
+      `#${this.getAttribute('aria-labelledby')}`
+    )
+
+    this.classList.add('is-active')
+    branchContent.classList.add('is-active')
+    currentActiveCategory.classList.remove('is-active')
+    currentActiveContent.classList.remove('is-active')
+    currentActiveCategory = this
+    currentActiveContent = branchContent
+  }
 }
 
-branchCaseItem(0)
-branchCaseItem(1)
-branchCaseItem(2)
-branchCaseItem(3)
-branchCaseItem(4)
-branchCaseItem(5)
-branchCaseItem(6)
+branchCategoryButtonList.forEach((button) => {
+  button.addEventListener('click', toggleBranchContents)
+})
