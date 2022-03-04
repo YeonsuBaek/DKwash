@@ -1,29 +1,23 @@
-function fieldItem(i) {
-  let selectItem = document.querySelectorAll('.category-item')[i]
+const fieldCategoryButtonList = document.querySelectorAll('.category-item')
 
-  selectItem.addEventListener('click', function () {
-    for (j = 0; j <= 4; j++) {
-      document
-        .querySelectorAll('.category-item')
-        [j].classList.remove('is-active')
-      document
-        .querySelectorAll('.field-explain')
-        [j].classList.remove('is-active')
+function toggleFieldContents() {
+  let currentActiveCategory = document.querySelector('.category-item.is-active')
+  let currentActiveContent = document.querySelector('.field-explain.is-active')
 
-      if (i == j) {
-        continue
-      }
-    }
+  if (currentActiveCategory !== fieldCategoryButtonList) {
+    const fieldContent = document.querySelector(
+      `#${this.getAttribute('aria-labelledby')}`
+    )
 
-    selectItem.classList.add('is-active')
-    document.querySelectorAll('.field-explain')[i].classList.add('is-active')
-  })
+    this.classList.add('is-active')
+    fieldContent.classList.add('is-active')
+    currentActiveCategory.classList.remove('is-active')
+    currentActiveContent.classList.remove('is-active')
+    currentActiveCategory = this
+    currentActiveContent = fieldContent
+  }
 }
 
-fieldItem(0)
-fieldItem(1)
-fieldItem(2)
-fieldItem(3)
-fieldItem(4)
-
-// 이걸 해내네...나자신 대견해...
+fieldCategoryButtonList.forEach((button) => {
+  button.addEventListener('click', toggleFieldContents)
+})

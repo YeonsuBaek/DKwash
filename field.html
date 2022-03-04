@@ -137,23 +137,23 @@
         <div class="col-sm-4 col-md-4">
           <div class="category-content">
             <ul class="category-list">
-              <li class="category-item is-active">
+              <li class="category-item is-active" role="tab" aria-labelledby="field-01">
                 <button type="button">자동제어</button>
                 <i class="ic-chevron sm-hidden" aria-hidden></i>
               </li>
-              <li class="category-item">
+              <li class="category-item" role="tab" aria-labelledby="field-02">
                 <button type="button">설계</button>
                 <i class="ic-chevron sm-hidden" aria-hidden></i>
               </li>
-              <li class="category-item">
+              <li class="category-item" role="tab" aria-labelledby="field-03">
                 <button type="button">기계제조</button>
                 <i class="ic-chevron sm-hidden" aria-hidden></i>
               </li>
-              <li class="category-item">
+              <li class="category-item" role="tab" aria-labelledby="field-04">
                 <button type="button">자동세차기</button>
                 <i class="ic-chevron sm-hidden" aria-hidden></i>
               </li>
-              <li class="category-item">
+              <li class="category-item" role="tab" aria-labelledby="field-05">
                 <button type="button">케미컬</button>
                 <i class="ic-chevron sm-hidden" aria-hidden></i>
               </li>
@@ -162,7 +162,7 @@
         </div>
 
         <div class="col-sm-4 col-md-8">
-          <article class="field-explain is-active">
+          <article class="field-explain is-active" id="field-01" role="tabpanel">
             <div class="field-explain-image">
               <img src="./assets/images/img-source-02.jpg" alt="" />
             </div>
@@ -175,7 +175,7 @@
             </div>
           </article>
 
-          <article class="field-explain">
+          <article class="field-explain" id="field-02" role="tabpanel">
             <div class="field-explain-image">
               <img src="./assets/images/img-source-03.jpg" alt="" />
             </div>
@@ -188,7 +188,7 @@
             </div>
           </article>
 
-          <article class="field-explain">
+          <article class="field-explain" id="field-03" role="tabpanel">
             <div class="field-explain-image">
               <img src="./assets/images/img-source-04.jpg" alt="" />
             </div>
@@ -201,7 +201,7 @@
             </div>
           </article>
 
-          <article class="field-explain">
+          <article class="field-explain" id="field-04" role="tabpanel">
             <div class="field-explain-image">
               <img src="./assets/images/img-source-05.jpg" alt="" />
             </div>
@@ -214,7 +214,7 @@
             </div>
           </article>
 
-          <article class="field-explain">
+          <article class="field-explain" id="field-05" role="tabpanel">
             <div class="field-explain-image">
               <img src="./assets/images/img-source-01.jpg" alt="" />
             </div>
@@ -482,8 +482,6 @@
   <script src="./js/common.js"></script>
   <script src="./js/globalNavi.js"></script>
   <script src="./js/drawerMenu.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-  <script src="./js/homeCarousel.js"></script>
   <script src="./js/field.js"></script>
 </body>
 
