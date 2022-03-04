@@ -1,42 +1,51 @@
-document.querySelector('.detail').addEventListener('click', function () {
-  document.querySelector('.chemical-nav').classList.add('is-detail')
-  document.querySelectorAll('.chemical-list')[1].classList.add('is-active')
-  document.querySelectorAll('.chemical-list')[0].classList.remove('is-active')
-})
+const equipButton = document.querySelector('.equip')
+const detailButton = document.querySelector('.detail')
+const chemicalCategory = document.querySelector('.chemical-nav')
+const equipContents = document.querySelectorAll('.chemical-list')[0]
+const detailContents = document.querySelectorAll('.chemical-list')[1]
 
-document.querySelector('.equip').addEventListener('click', function () {
-  document.querySelector('.chemical-nav').classList.remove('is-detail')
-  document.querySelectorAll('.chemical-list')[0].classList.add('is-active')
-  document.querySelectorAll('.chemical-list')[1].classList.remove('is-active')
-})
+const chemicalButton = document.querySelectorAll('.chemical-item')
+const closeButton = document.querySelectorAll('.close-button')
+const productModal = document.querySelector('.product-modal')
+const overlay = document.querySelector('.overlay')
 
-document.querySelector('.close-button').addEventListener('click', function () {
-  document
-    .querySelector('.product-modal.is-active')
-    .classList.remove('is-active')
-  document.querySelector('.overlay').classList.remove('is-active')
-})
-
-function chemicalModal(i) {
-  const selectItem = document.querySelectorAll('.chemical-item')[i]
-  const selectedItem = document.querySelectorAll('.product-modal-item')[i]
-
-  selectItem.addEventListener('click', function () {
-    document.querySelector('.product-modal').classList.add('is-active')
-    selectedItem.classList.add('is-active')
-    document.querySelector('.overlay').classList.add('is-active')
-  })
-
-  document
-    .querySelectorAll('.close-button')
-    [i].addEventListener('click', function () {
-      document.querySelector('.product-modal').classList.remove('is-active')
-      selectedItem.classList.remove('is-active')
-      document.querySelector('.overlay').classList.remove('is-active')
-    })
+function toggleDetail() {
+  chemicalCategory.classList.add('is-detail')
+  equipContents.classList.remove('is-active')
+  detailContents.classList.add('is-active')
 }
 
-chemicalModal(0)
-chemicalModal(1)
-chemicalModal(2)
-chemicalModal(3)
+function toggleEquip() {
+  chemicalCategory.classList.remove('is-detail')
+  detailContents.classList.remove('is-active')
+  equipContents.classList.add('is-active')
+}
+
+detailButton.addEventListener('click', toggleDetail)
+equipButton.addEventListener('click', toggleEquip)
+
+function openChemicalModal() {
+  const chemicalModal = document.querySelector(
+    `#${this.getAttribute('aria-labelledby')}`
+  )
+
+  productModal.classList.add('is-active')
+  chemicalModal.classList.add('is-active')
+  overlay.classList.add('is-active')
+}
+
+chemicalButton.forEach((button) => {
+  button.addEventListener('click', openChemicalModal)
+})
+
+function closeModal() {
+  const currentModal = document.querySelector('.product-modal-item.is-active')
+
+  productModal.classList.remove('is-active')
+  currentModal.classList.remove('is-active')
+  overlay.classList.remove('is-active')
+}
+
+closeButton.forEach((button) => {
+  button.addEventListener('click', closeModal)
+})
