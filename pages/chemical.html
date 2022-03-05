@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DK WASH | 오시는길</title>
+    <title>DK WASH | 케미컬</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -22,8 +22,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./fonts.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../fonts.css" />
   </head>
 
   <body>
@@ -35,9 +35,9 @@
               <div class="col-sm-4">
                 <div class="gnb-wrapper">
                   <h1 class="logo">
-                    <a href="./index.html">
+                    <a href="../index.html">
                       <img
-                        src="./assets/images/logo-row.svg"
+                        src="../assets/images/logo-row.svg"
                         alt="디케이워시"
                       />
                     </a>
@@ -46,10 +46,10 @@
                   <nav class="gnb-nav lg-only">
                     <h2 class="visually-hidden">메뉴</h2>
                     <ul class="gnb-nav-list">
-                      <li class="gnb-nav-item is-open">
+                      <li class="gnb-nav-item">
                         <a href="./introduce.html">회사소개</a>
                       </li>
-                      <li class="gnb-nav-item">
+                      <li class="gnb-nav-item is-open">
                         <a href="./nobrush.html">제품소개</a>
                       </li>
                       <li class="gnb-nav-item">
@@ -139,43 +139,334 @@
       </nav>
     </header>
 
-    <main class="sub location">
+    <main class="sub chemical">
       <header class="sub-banner">
-        <h1 class="sub-banner-title">오시는 길</h1>
+        <h1 class="sub-banner-title">케미컬</h1>
       </header>
+
+      <nav class="chemical-nav">
+        <h1 class="visually-hidden">케미컬 종류</h1>
+
+        <button class="equip" type="button">장비용</button>
+        <button class="detail" type="button">디테일용</button>
+      </nav>
 
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <div class="location-map">
-              <div
-                id="daumRoughmapContainer1635634080032"
-                class="map root_daum_roughmap root_daum_roughmap_landing"
-              ></div>
-            </div>
-
-            <div class="location-info">
-              <div class="location-info-title">
-                <h2>DK wash</h2>
-                <p>공장 및 사무실</p>
-              </div>
-
-              <div class="location-info-detail">
-                <div class="location-info-address">
-                  <i class="ic-location"></i>
-                  <address>대전광역시 대덕구 대덕대로1627번길 85</address>
+            <ul class="chemical-list is-active">
+              <li
+                class="chemical-item"
+                role="tab"
+                aria-labelledby="chemical-01"
+              >
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-01.jpeg"
+                    alt="DKC P101"
+                  />
                 </div>
 
-                <div class="location-info-tel">
-                  <i class="ic-cell"></i>
-                  <a href="tel:16448702">1644-8702</a>
+                <div class="chemical-title">
+                  <strong>DKC P101</strong>
+                  <h2>농축된 ULTRA LOW pH 예비 세차</h2>
                 </div>
-              </div>
-            </div>
+              </li>
+
+              <li
+                class="chemical-item"
+                role="tab"
+                aria-labelledby="chemical-02"
+              >
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-02.jpg"
+                    alt="DKC P201"
+                  />
+                </div>
+
+                <div class="chemical-title">
+                  <strong>DKC P201</strong>
+                  <h2>HEAVY DUTY 알카라인 예비 세차</h2>
+                </div>
+              </li>
+
+              <li
+                class="chemical-item"
+                role="tab"
+                aria-labelledby="chemical-03"
+              >
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-03.jpg"
+                    alt="DKC F301"
+                  />
+                </div>
+
+                <div class="chemical-title">
+                  <strong>DKC F301</strong>
+                  <h2>슈퍼 폼 (샴푸)</h2>
+                </div>
+              </li>
+
+              <li
+                class="chemical-item"
+                role="tab"
+                aria-labelledby="chemical-04"
+              >
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-04.jpg"
+                    alt="DKC W401"
+                  />
+                </div>
+
+                <div class="chemical-title">
+                  <strong>DKC W401</strong>
+                  <h2>CLEAR 코트 실란트 및 보호제 (왁스)</h2>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="chemical-list">
+              <li class="chemical-item">
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-02.jpg"
+                    alt="DKC P201"
+                  />
+                </div>
+
+                <div class="chemical-title">
+                  <h2>DK 스페셜클리너</h2>
+                </div>
+              </li>
+
+              <li class="chemical-item">
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-03.jpg"
+                    alt="DKC F301"
+                  />
+                </div>
+
+                <div class="chemical-title">
+                  <h2>DK 버그오프</h2>
+                </div>
+              </li>
+
+              <li class="chemical-item">
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-04.jpg"
+                    alt="DKC W401"
+                  />
+                </div>
+
+                <div class="chemical-title">
+                  <h2>DK 퍼플스터프 디그리져</h2>
+                </div>
+              </li>
+
+              <li class="chemical-item">
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-02.jpg"
+                    alt="DKC P201"
+                  />
+                </div>
+
+                <div class="chemical-title">
+                  <h2>DK 올클린</h2>
+                </div>
+              </li>
+
+              <li class="chemical-item">
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-03.jpg"
+                    alt="DKC F301"
+                  />
+                </div>
+
+                <div class="chemical-title">
+                  <h2>DK 노터치 휠크리너</h2>
+                </div>
+              </li>
+
+              <li class="chemical-item">
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-04.jpg"
+                    alt="DKC W401"
+                  />
+                </div>
+
+                <div class="chemical-title">
+                  <h2>DK 쇼룸샤인</h2>
+                </div>
+              </li>
+
+              <li class="chemical-item">
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-02.jpg"
+                    alt="DKC P201"
+                  />
+                </div>
+
+                <div class="chemical-title">
+                  <h2>DK 듀레이션</h2>
+                </div>
+              </li>
+
+              <li class="chemical-item">
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-03.jpg"
+                    alt="DKC F301"
+                  />
+                </div>
+
+                <div class="chemical-title">
+                  <h2>DK 레더샤인</h2>
+                </div>
+              </li>
+
+              <li class="chemical-item">
+                <div class="chemical-image">
+                  <img
+                    src="../assets/images/img-chemical-03.jpg"
+                    alt="DKC F301"
+                  />
+                </div>
+
+                <div class="chemical-title">
+                  <h2>스팅거 유니블루</h2>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </main>
+
+    <aside class="product-modal">
+      <ul class="product-modal-list">
+        <li class="product-modal-item" id="chemical-01">
+          <header class="product-modal-title">
+            <h1>DKC P101</h1>
+
+            <button class="close-button" type="button">
+              <i class="ic-close"></i>
+            </button>
+          </header>
+
+          <div class="product-modal-content">
+            <div class="product-modal-image">
+              <img src="../assets/images/img-chemical-01.jpeg" alt="DKC P101" />
+            </div>
+
+            <div class="product-modal-wrapper">
+              <h2>농축된 ULTRA LOW pH 예비 세차</h2>
+
+              <p>
+                사전 세척의 첫 번째 공급 단계에서 사용하기 위해 만들어진
+                브러시리스 시스템용 세제입니다.<br />
+                혁신적인 기능 덕분에 DKC P101은 차체를 깊숙이 청소하여 교통 막,
+                배기 산화물 및 유기 잔류 물을 제거합니다.<br />
+                모든 신세대 고무, 플라스틱, 씰 및 자동차 트림의 부품을
+                보존합니다.<br />
+                극도로 생분해되는 계면 활성제 덕분에 DKCP101은 환경에 미치는
+                영향을 최소화하도록 제조되었습니다.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="product-modal-item" id="chemical-02">
+          <header class="product-modal-title">
+            <h1>DKC P102</h1>
+
+            <button class="close-button" type="button">
+              <i class="ic-close"></i>
+            </button>
+          </header>
+
+          <div class="product-modal-content">
+            <div class="product-modal-image">
+              <img src="../assets/images/img-chemical-02.jpg" alt="DKC P102" />
+            </div>
+
+            <div class="product-modal-wrapper">
+              <h2>HEAVY DUTY 알카라인 예비 세차</h2>
+
+              <p>
+                DKC P201는 브러시를 사용하지 않고도 차량을 가장 효과적으로
+                청소할 수 있도록 특별히 고안된 알칼리성 제품을 포함합니다.<br />
+                DKC P201는 페인트 작업과 접촉 부분을 고려하면서 모든 유형의
+                먼지에 대해 매우 효과적입니다.<br />
+                DKC P201는 차량 차체를 매우 깨끗하고 광택이 나게 합니다.<br />
+                극도로 생분해되는 계면 활성제 덕분에 DKC P201는 환경에 미치는
+                영향을 최소화하도록 제조되었습니다.<br />
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="product-modal-item" id="chemical-03">
+          <header class="product-modal-title">
+            <h1>DKC F301</h1>
+
+            <button class="close-button" type="button">
+              <i class="ic-close"></i>
+            </button>
+          </header>
+
+          <div class="product-modal-content">
+            <div class="product-modal-image">
+              <img src="../assets/images/img-chemical-03.jpg" alt="DKC –F301" />
+            </div>
+
+            <div class="product-modal-wrapper">
+              <h2>슈퍼 폼 (샴푸)</h2>
+
+              <p>
+                고농축 고발포폼 클리너 및 바디 샴푸.<br />
+                완전한 커버리지와 최대 표면 접착력을 위해 두껍고 풍부한 폼을
+                만들어 터치시 마찰을 줄이고, 우수한 광택 효과를 가지고 있어
+                놀라운 고압 비누로 사용할 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="product-modal-item" id="chemical-04">
+          <header class="product-modal-title">
+            <h1>DKC W401</h1>
+
+            <button class="close-button" type="button">
+              <i class="ic-close"></i>
+            </button>
+          </header>
+
+          <div class="product-modal-content">
+            <div class="product-modal-image">
+              <img src="../assets/images/img-chemical-04.jpg" alt="DKC W401" />
+            </div>
+
+            <div class="product-modal-wrapper">
+              <h2>CLEAR 코트 실란트 및 보호제 (왁스)</h2>
+
+              <p>
+                차량 투명도장막인 클리어코트 보호제. <br />
+                DKC W401은 차량표면을 최대 보호하고 최고의 희석을 제공합니다.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </aside>
 
     <footer class="global-footer home-pages">
       <div class="container">
@@ -204,7 +495,7 @@
               <div class="info-wrapper">
                 <h1 class="logo">
                   <img
-                    src="./assets/images/logo-def-gray.svg"
+                    src="../assets/images/logo-def-gray.svg"
                     alt="디케이워시"
                   />
                 </h1>
@@ -276,8 +567,8 @@
 
     <aside class="sidebar lg-hidden">
       <h1 class="logo">
-        <a href="./index.html">
-          <img src="./assets/images/logo-row.svg" alt="디케이워시" />
+        <a href="../index.html">
+          <img src="../assets/images/logo-row.svg" alt="디케이워시" />
         </a>
       </h1>
 
@@ -285,7 +576,7 @@
         <h2 class="visually-hidden">메뉴</h2>
 
         <div class="drawer-menu is-three">
-          <button class="drawer-menu-button is-active" type="button">
+          <button class="drawer-menu-button" type="button">
             <h3>회사소개</h3>
             <i class="ic-chevron"></i>
           </button>
@@ -297,7 +588,7 @@
               <li class="drawer-menu-item">
                 <a href="./field.html">사업분야</a>
               </li>
-              <li class="drawer-menu-item is-active">
+              <li class="drawer-menu-item">
                 <a href="./location.html">오시는길</a>
               </li>
             </ul>
@@ -305,7 +596,7 @@
         </div>
 
         <div class="drawer-menu is-two">
-          <button class="drawer-menu-button" type="button">
+          <button class="drawer-menu-button is-active" type="button">
             <h3>제품소개</h3>
             <i class="ic-chevron"></i>
           </button>
@@ -314,7 +605,7 @@
               <li class="drawer-menu-item">
                 <a href="./nobrush.html">노브러쉬자동세차기</a>
               </li>
-              <li class="drawer-menu-item">
+              <li class="drawer-menu-item is-active">
                 <a href="./chemical.html">케미컬</a>
               </li>
             </ul>
@@ -442,14 +733,9 @@
 
     <div id="overlay" class="overlay" aria-hidden></div>
 
-    <script
-      charset="UTF-8"
-      class="daum_roughmap_loader_script"
-      src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
-    ></script>
-    <script src="./js/kakaoMap.js"></script>
-    <script src="./js/common.js"></script>
-    <script src="./js/globalNavi.js"></script>
-    <script src="./js/drawerMenu.js"></script>
+    <script src="../js/chemical.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/globalNavi.js"></script>
+    <script src="../js/drawerMenu.js"></script>
   </body>
 </html>
