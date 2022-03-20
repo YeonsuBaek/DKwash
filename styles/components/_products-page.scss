@@ -69,8 +69,7 @@
       }
     }
 
-    &.is-active,
-    &:hover {
+    &.is-active {
       width: 112px;
       height: 160px;
       background-color: $red;
