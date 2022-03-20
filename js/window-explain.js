@@ -35,3 +35,13 @@ function changeColorToDark() {
 }
 
 main.addEventListener('scroll', changeColorToDark, 300)
+
+function scrollToTop() {
+  main.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  })
+}
+
+topButton.addEventListener('click', scrollToTop)
