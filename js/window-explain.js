@@ -23,3 +23,15 @@ function toggleContents() {
 }
 
 main.addEventListener('scroll', toggleContents, 300)
+
+function changeColorToDark() {
+  if (darkPage.getBoundingClientRect().top < window.innerHeight) {
+    scroll.classList.add('dark')
+    topButton.classList.add('dark')
+  } else {
+    scroll.classList.remove('dark')
+    topButton.classList.remove('dark')
+  }
+}
+
+main.addEventListener('scroll', changeColorToDark, 300)
