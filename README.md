@@ -1,7 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=d7000f&height=240&section=header&text=DKwash&fontSize=48)
 
 #### 📺 Demo Site 📺
-<a href="https://yeonsubaek.github.io/DKwash/" alt="DKwash">Click👉</a>
+<a href="https://yeonsubaek.github.io/DKwash/" alt="DKwash" target="_blank">Click👉</a>
 </a>
 
 #### 📃 Studying 📃
