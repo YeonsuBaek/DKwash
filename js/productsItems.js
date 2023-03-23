@@ -11,5 +11,5 @@ function toggleProductsItem() {
 }
 
 productsList.forEach((button) => {
-  button.addEventListener('pointerup', toggleProductsItem)
+  button.addEventListener('pointerdown', toggleProductsItem)
 })
