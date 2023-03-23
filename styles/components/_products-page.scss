@@ -159,6 +159,10 @@
           @include flexbox;
           flex-direction: row;
 
+          .arr {
+            margin-top: 8px;
+          }
+
           span {
             margin-bottom: 0;
             margin-right: 8px;
