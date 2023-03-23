@@ -791,7 +791,7 @@ ol {
       opacity: 0;
       visibility: hidden;
       transform: translate3d(-50%, 20px, 0);
-      transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out, transform 200ms ease-in-out; }
+      transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out, transform 200ms ease-in-out; }
       .inquery-form.is-active {
         display: block;
         opacity: 1;
@@ -811,7 +811,7 @@ ol {
   opacity: 0;
   visibility: hidden;
   transform: translate3d(-50%, 0, 0);
-  transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out, transform 200ms ease-in-out; }
+  transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out, transform 200ms ease-in-out; }
   .branch-modal.is-active {
     opacity: 1;
     visibility: visible;
@@ -1718,7 +1718,7 @@ ol {
         border: 1px solid #fff;
         border-radius: 50%;
         opacity: 0.8;
-        transition: background-color 200ms ease-in-out, opacity 200ms ease-in-out; }
+        transition: background-color 200ms ease-in-out, opacity 200ms ease-in-out; }
       .home-carousel-pagination .pagination-item.tns-nav-active button {
         background-color: #fff;
         opacity: 1; }
@@ -1814,7 +1814,7 @@ ol {
     border-radius: 50%;
     background-color: #191a20;
     opacity: 0.7;
-    transition: width 200ms ease-in-out, height 200ms ease-in-out, background-color 200ms ease-in-out, opacity 200ms ease-in-out; }
+    transition: width 200ms ease-in-out, height 200ms ease-in-out, background-color 200ms ease-in-out, opacity 200ms ease-in-out; }
     .info-page .info-item button {
       font-size: 10px;
       line-height: 16px;
@@ -1987,20 +1987,20 @@ ol {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 80px;
-    height: 120px;
+    width: 140px;
+    height: 200px;
     background-color: #191a20;
     text-align: center;
     opacity: 0.7;
-    transition: width 150ms ease-in-out, height 150ms ease-in-out, background-color 150ms ease-in-out, opacity 150ms ease-in-out; }
+    transition: width 150ms ease-in-out, height 150ms ease-in-out, background-color 150ms ease-in-out, opacity 150ms ease-in-out; }
     .products-page .products-item:first-child {
       margin-right: 20px; }
     .products-page .products-item i {
-      margin-bottom: 4px;
+      margin-bottom: 8px;
       font-size: 40px;
       color: #fff; }
     .products-page .products-item .products-name {
-      font-size: 10px;
+      font-size: 12px;
       line-height: 16px;
       letter-spacing: -0.005em;
       color: #fff;
@@ -2015,7 +2015,7 @@ ol {
       .products-page .products-item .view-button .arr {
         position: relative;
         width: 40px;
-        margin: 4px auto 0;
+        margin: 8px auto 0;
         border-top: 1px solid #fff;
         animation: scroll 1s infinite alternate; }
         .products-page .products-item .view-button .arr::after {
@@ -2027,18 +2027,15 @@ ol {
           position: absolute;
           left: 0;
           top: 0; }
-    .products-page .products-item.is-active, .products-page .products-item:hover {
-      width: 112px;
-      height: 160px;
+    .products-page .products-item.is-active {
       background-color: #d7000f;
       opacity: 1; }
-      .products-page .products-item.is-active:first-child, .products-page .products-item:hover:first-child {
+      .products-page .products-item.is-active:first-child {
         transform-origin: bottom right; }
-      .products-page .products-item.is-active:last-child, .products-page .products-item:hover:last-child {
+      .products-page .products-item.is-active:last-child {
         transform-origin: bottom left; }
       .products-page .products-item.is-active .products-name-eng,
-      .products-page .products-item.is-active .view-button, .products-page .products-item:hover .products-name-eng,
-      .products-page .products-item:hover .view-button {
+      .products-page .products-item.is-active .view-button {
         display: block;
         visibility: visible;
         font-size: 10px;
@@ -2047,8 +2044,8 @@ ol {
         color: #fff; }
   @media screen and (min-width: 768px) {
     .products-page .products-item {
-      width: 208px;
-      height: 312px; }
+      width: 280px;
+      height: 400px; }
       .products-page .products-item i {
         margin-bottom: 16px;
         font-size: 80px; }
@@ -2061,45 +2058,42 @@ ol {
           display: none;
           visibility: hidden;
           margin-bottom: 24px; }
-      .products-page .products-item.is-active {
-        width: 280px;
-        height: 400px; }
-        .products-page .products-item.is-active .products-name-eng,
-        .products-page .products-item.is-active .view-button {
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: -0.01em;
-          color: #fff; }
-        .products-page .products-item.is-active .view-button {
-          flex-direction: column; }
-          .products-page .products-item.is-active .view-button .arr {
-            margin: 24px auto 0; }
-          .products-page .products-item.is-active .view-button span {
-            margin-bottom: 16px; } }
+      .products-page .products-item.is-active .products-name-eng,
+      .products-page .products-item.is-active .view-button {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        color: #fff; }
+      .products-page .products-item.is-active .view-button {
+        flex-direction: column; }
+        .products-page .products-item.is-active .view-button .arr {
+          margin: 24px auto 0; }
+        .products-page .products-item.is-active .view-button span {
+          margin-bottom: 16px; } }
   @media screen and (min-width: 1200px) {
     .products-page .products-item {
-      width: 360px;
-      height: 240px; }
+      width: 408px;
+      height: 272px; }
       .products-page .products-item .products-name {
         font-size: 18px;
         line-height: 28px;
         letter-spacing: -0.02em; }
-      .products-page .products-item.is-active {
-        width: 408px;
-        height: 272px; }
-        .products-page .products-item.is-active .products-name-eng,
-        .products-page .products-item.is-active .view-button {
-          font-size: 18px;
-          line-height: 28px;
-          letter-spacing: -0.02em; }
-        .products-page .products-item.is-active .view-button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: row; }
-          .products-page .products-item.is-active .view-button span {
-            margin-bottom: 0;
-            margin-right: 8px; } }
+      .products-page .products-item.is-active .products-name-eng,
+      .products-page .products-item.is-active .view-button {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.02em; }
+      .products-page .products-item.is-active .view-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row; }
+        .products-page .products-item.is-active .view-button .arr {
+          margin-top: 8px;
+          margin-left: 8px; }
+        .products-page .products-item.is-active .view-button span {
+          margin-bottom: 0;
+          margin-right: 8px; } }
 
 @keyframes scroll {
   100% {
@@ -2115,7 +2109,7 @@ ol {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: calc( 100vh - 138px); }
+    height: calc( 100vh - 138px); }
     .branch-page .branch-map {
       position: relative; }
       .branch-page .branch-map .map {
@@ -2168,7 +2162,7 @@ ol {
     .branch-page {
       height: calc(100vh - 80px); }
       .branch-page .branch {
-        height: calc( 100vh - 216px); }
+        height: calc( 100vh - 216px); }
         .branch-page .branch-count button {
           font-size: 16px;
           line-height: 24px;
@@ -2199,7 +2193,7 @@ ol {
           right: 32%; } }
   @media screen and (min-width: 1200px) {
     .branch-page .branch {
-      height: calc( 100vh - 268px); }
+      height: calc( 100vh - 268px); }
       .branch-page .branch-map {
         position: static;
         display: flex;
@@ -2224,7 +2218,7 @@ ol {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: calc( 100vh - 138px); }
+    height: calc( 100vh - 138px); }
   .youtube-page .video-wrapper {
     display: flex;
     align-items: center;
@@ -2252,7 +2246,7 @@ ol {
     .youtube-page {
       height: calc(100vh - 80px); }
       .youtube-page .youtube-wrapper {
-        height: calc( 100vh - 216px); }
+        height: calc( 100vh - 216px); }
       .youtube-page .video-wrapper {
         margin-bottom: 48px; }
       .youtube-page iframe {
@@ -2551,7 +2545,7 @@ ol {
   opacity: 0;
   visibility: hidden;
   transform: translate3d(-50%, 0, 0);
-  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out, transform 300ms ease-in-out; }
+  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out, transform 300ms ease-in-out; }
   .product-modal.is-active {
     opacity: 1;
     visibility: visible;
